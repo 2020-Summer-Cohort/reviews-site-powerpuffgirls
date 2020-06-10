@@ -1,11 +1,19 @@
 * {
-    box-sizing: border-box;
-    font-family: "Anton", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  font-family: "Anton", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .container{
-      background-color: green;
+:root { 
+  --color1-aero-blue: #D7FFF1;
+  --color2-granny-smith-apple: #AAFCB8;
+  --color3-granny-smith-apple-2: #8CD790;
+  --color4-green-sheen: #77AF9C;
+  --color5-castleton-green: #285943;
 
-  }
+}
+
+.container {
+  background-color: var(--color1-aero-blue);
+}
