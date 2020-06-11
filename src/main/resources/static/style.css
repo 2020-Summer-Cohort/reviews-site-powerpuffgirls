@@ -46,8 +46,9 @@ a:visited {
   background-color: var(--color1-aero-blue);
 }
 
-.hashtags {
+.hashtags a {
   font-family: "Questrial", sans-serif;
+  background-color: var(--color4-green-sheen);
 }
 
 header h1 {
