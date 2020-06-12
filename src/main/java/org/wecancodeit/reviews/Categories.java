@@ -1,3 +1,5 @@
+package org.wecancodeit.reviews;
+
 public class Categories {
     public class categories{
 
