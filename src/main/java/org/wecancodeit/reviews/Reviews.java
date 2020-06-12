@@ -8,9 +8,11 @@ public class Reviews {
     private String airDate;
     private String description;
     private String image;
-    private Collection<Hashtags> hashTags;
+    private String hashTags;
+//    private Collection<Hashtags> hashTags;
 
-    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Collection<Hashtags> hashTags) {
+
+    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, String hashtags) {
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
@@ -18,13 +20,27 @@ public class Reviews {
         this.hashTags = hashTags;
     }
 
+
+//    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Collection<Hashtags> hashTags) {
+//        this.showTitle = showTitle;
+//        this.showRating = showRating;
+//        this.airDate = airDate;
+//        this.description = description;
+//        this.hashTags = hashTags;
+//    }
     public String getImage() {
         return image;
     }
 
-    public Collection<Hashtags> getHashTags() {
+
+
+    public String getHashTags() {
         return hashTags;
     }
+
+//    public Collection<Hashtags> getHashTags() {
+//        return hashTags;
+//    }
 
     public String getShowTitle() {
         return showTitle;
