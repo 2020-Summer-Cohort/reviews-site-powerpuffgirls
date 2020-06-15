@@ -19,12 +19,12 @@
       <main>
         <ul class="hashtags">
           <li th:each="hashTag: ${hashtagNames}">
-          <a th:text= "${hashTag}" th:href="@{''+${hashTag}}"></a>
+          <a th:text= "${hashTag}" th:href="@{'/categories/'+${hashTag}}"></a>
           </li>
           </ul>
       </main>
       <footer>
-        <a href="../static/categories.html">Back To Categories!</a>
+        <a href="categories-template.html">Back To Categories!</a>
       </footer>
     </div>
   </body>

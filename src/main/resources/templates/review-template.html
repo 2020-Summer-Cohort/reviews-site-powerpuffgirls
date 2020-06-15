@@ -28,10 +28,8 @@
           th:text="${reviews.airDate}"
         </strong>
       </p>
-      <p>
-        th:text="${reviews.description}
-        th:text="${reviews.showRating}
-      </p>
+      <p th:text="${reviews.description}></p>
+      <p th:text="${reviews.showRating}></p>
       <ul>
         <li th:each="hashTag: ${reviews.hashTags}">
           <a th:text= "${hashTag}" th:href="@{'/reviews/'+${hashTag}}"></a>
