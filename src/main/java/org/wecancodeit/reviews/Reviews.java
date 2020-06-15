@@ -14,16 +14,9 @@ public class Reviews {
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
+        this.image = image;
         this.description = description;
         this.hashTags = hashTags;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public Collection<Hashtags> getHashTags() {
-        return hashTags;
     }
 
     public String getShowTitle() {
@@ -40,5 +33,13 @@ public class Reviews {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public Collection<Hashtags> getHashTags() {
+        return hashTags;
     }
 }
