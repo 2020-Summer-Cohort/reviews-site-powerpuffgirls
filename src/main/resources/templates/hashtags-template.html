@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/layout.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>
+          #hashtags
+        </h2>
+      </header>
+      <main>
+        <ul class="hashtags">
+          <li th:each="hashTag: ${hashtagNames}">
+          <a th:text= "${hashTag}" th:href="@{''+${hashTag}}"></a>
+          </li>
+          </ul>
+      </main>
+      <footer>
+        <a href="../static/categories.html">Back To Categories!</a>
+      </footer>
+    </div>
+  </body>
+</html>

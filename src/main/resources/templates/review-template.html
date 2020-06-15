@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../static/style.css" />
-  <link rel="stylesheet" href="../../static/layout.css" />
+  <link rel="stylesheet" href="./static/style.css" />
+  <link rel="stylesheet" href="./static/layout.css" />
   <title>th:text="${reviews.showTitle}"</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="super-jail">
       <div class="super-jail-pic">
         <img
-                src="../../static/images/superjail.JPG"
+                src="./static/images/superjail.JPG"
                 alt="SuperJail"
                 style="width: 300px; height: 400px;"
         />
@@ -34,15 +34,13 @@
       </p>
       <ul>
         <li th:each="hashTag: ${reviews.hashTags}">
-          <a th:text= "${hashtag}" th:href="@{'/reviews/'+${hashTag}}">#funny</a>
+          <a th:text= "${hashTag}" th:href="@{'/reviews/'+${hashTag}}"></a>
         </li>
       </ul>
-      <!--          <a href="../../static/violent.html">#violent</a>-->
-      <!--          <a href="../../static/funny.html">#funny</a>-->
     </div>
   </main>
   <footer>
-    <a href="../../static/categories.html">Back To Categories!</a>
+    <a href="./static/categories.html">Back To Categories!</a>
   </footer>
 </div>
 </body>
