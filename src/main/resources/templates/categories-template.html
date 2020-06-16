@@ -2,41 +2,44 @@
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/layout.css"  rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+
+
     <title>Review Site</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
+</head>
+<body>
+<div class="container">
+    <header>
         <h1>
-          Cartoon Show Reviews
+            Cartoon Show Reviews
         </h1>
-      </header>
+    </header>
 
-      <main>
+    <main>
         <div class="main-categories">
-          <ul>
-            <li th:each="category: ${categoryNames.entrySet()}">
-              <a th:text= "${category.key}" th:href="@{'/categories/'+${category.value}}"></a>
-            </li>
-          </ul>
-<!--          <div class="adult-animation">-->
-<!--            <a class="categories" href="../static/adultanimation-template.html"><h2>Adult Animation</h2></a>-->
-<!--          </div>-->
+            <ul>
+                <li th:each="category: ${categoryNames.entrySet()}">
+                    <a th:text="${category.key}" th:href="@{'/categories/'+${category.value}}"></a>
+                </li>
+            </ul>
+            <!--          <div class="adult-animation">-->
+            <!--            <a class="categories" href="../static/adultanimation-template.html"><h2>Adult Animation</h2></a>-->
+            <!--          </div>-->
 
-<!--          <div class="kids-cartoons">-->
-<!--            <a class="categories" href="../static/kidscartoons-template.html"><h2>Kids Cartoons</h2></a>-->
-<!--          </div>-->
+            <!--          <div class="kids-cartoons">-->
+            <!--            <a class="categories" href="../static/kidscartoons-template.html"><h2>Kids Cartoons</h2></a>-->
+            <!--          </div>-->
 
-<!--          <div class="hashtag-category">-->
-<!--            <a class="categories" href="hashtags-template.html"><h2>#hashtags</h2></a>-->
-<!--          </div>-->
+            <!--          <div class="hashtag-category">-->
+            <!--            <a class="categories" href="hashtags-template.html"><h2>#hashtags</h2></a>-->
+            <!--          </div>-->
         </div>
-      </main>
-      <footer></footer>
-    </div>
-  </body>
+    </main>
+    <footer></footer>
+</div>
+</body>
 </html>
