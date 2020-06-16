@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=BebasNeue&family=Fredoka+One&family=Questrial&family=Quicksand:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color1-aero-blue: #d7fff1;
+  --color2-granny-smith-apple: #aafcb8;
+  --color3-granny-smith-apple-2: #8cd790;
+  --color4-green-sheen: #77af9c;
+  --color5-castleton-green: #285943;
+}
+
+a {
+  border-radius: 10%;
+  background-color: var(--color3-granny-smith-apple-2);
+  padding: 5px;
+  font-family: "Questrial", sans-serif;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.adult-animation {
+  border-radius: 50%;
+}
+
+.categories {
+  display: inline-block;
+  border-radius: 50%;
+  font-size: x-large;
+  padding: 50px;
+  font-family: "Questrial", sans-serif;
+}
+.container {
+  background-color: var(--color1-aero-blue);
+}
+
+.hashtags a {
+  font-family: "Questrial", sans-serif;
+  background-color: var(--color4-green-sheen);
+}
+
+header h1 {
+  font-family: "Bangers", cursive;
+  font-size: 65px;
+}
+
+header h2 {
+  font-family: "Fredoka One", cursive;
+  font-size: 40px;
+}
+
+h3 {
+  border-radius: 10%;
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--color2-granny-smith-apple);
+}
+
+p {
+  background-color: var(--color1-aero-blue);
+  font-family: "Quicksand", sans-serif;
+}
