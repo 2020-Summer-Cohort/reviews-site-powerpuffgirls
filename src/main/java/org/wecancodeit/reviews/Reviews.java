@@ -8,22 +8,19 @@ public class Reviews {
     private String airDate;
     private String description;
     private String image;
-    private Collection<Hashtags> hashTags;
 
-    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Collection<Hashtags> hashTags) {
+
+    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image) {
+
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
         this.description = description;
-        this.hashTags = hashTags;
+
     }
 
     public String getImage() {
         return image;
-    }
-
-    public Collection<Hashtags> getHashTags() {
-        return hashTags;
     }
 
     public String getShowTitle() {
