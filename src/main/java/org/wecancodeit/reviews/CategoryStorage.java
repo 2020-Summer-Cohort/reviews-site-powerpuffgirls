@@ -2,26 +2,24 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class CategoryStorage {
 
-//    private String categoryName;
-
-        List<String> categoryNames;
+        Map<String, String> categories = new LinkedHashMap<>();
 
         public CategoryStorage(){
-            categoryNames = new ArrayList<>();
-            categoryNames.add("Adult Animation");
-            categoryNames.add("Kids Cartoons");
-            categoryNames.add("#hashtags");
+            categories.put("Adult Animation", "adultcategorynames");
+            categories.put("Kids Cartoons", "kidscategorynames");
+            categories.put("#hashtags", "hashtags");
+
+
         }
 
-        public List<String> findAllCategories() {
-            return categoryNames;
-        }
-
+    public Map<String, String> getCategories() {
+        return categories;
     }
+
+}
 

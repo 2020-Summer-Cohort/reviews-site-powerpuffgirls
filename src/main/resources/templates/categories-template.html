@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">>
+      xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/style.css" />
-    <link rel="stylesheet" href="../static/layout.css" />
+    <link href="./layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
     <title>Review Site</title>
   </head>
   <body>
@@ -20,16 +19,16 @@
       <main>
         <div class="main-categories">
           <ul>
-            <li th:each="category: ${categoryNames}">
-              <a th:text= "${category}" th:href="@{'/categories/'+${categoryNames}}"></a>
+            <li th:each="category: ${categoryNames.entrySet()}">
+              <a th:text= "${category.key}" th:href="@{'/categories/'+${category.value}}"></a>
             </li>
           </ul>
 <!--          <div class="adult-animation">-->
-<!--            <a class="categories" href="../static/adultanimation.html"><h2>Adult Animation</h2></a>-->
+<!--            <a class="categories" href="../static/adultanimation-template.html"><h2>Adult Animation</h2></a>-->
 <!--          </div>-->
 
 <!--          <div class="kids-cartoons">-->
-<!--            <a class="categories" href="../static/kidscartoons.html"><h2>Kids Cartoons</h2></a>-->
+<!--            <a class="categories" href="../static/kidscartoons-template.html"><h2>Kids Cartoons</h2></a>-->
 <!--          </div>-->
 
 <!--          <div class="hashtag-category">-->

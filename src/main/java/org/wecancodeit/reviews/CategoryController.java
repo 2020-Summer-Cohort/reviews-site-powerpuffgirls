@@ -2,6 +2,7 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,25 +15,24 @@ public class CategoryController {
 
         @RequestMapping("categories")
         public String showAllCategories(Model model){
-            model.addAttribute("categoryNames", categoryStorage.findAllCategories());
-            return "hashtags-template"; //TODO MAKE NEW TEMPLATE
+            model.addAttribute("categoryNames", categoryStorage.getCategories());
+            return "categories-template";
         }
 
-        @RequestMapping("categories/{adultCategoryName}")
-        public String showAdultAnimationShows(@PathVariable String adultCategoryName, Model model){
-            model.addAttribute("categories", showStorage.findAllAdultAnimationShowNames());
-            return "review-template"; //TODO MAKE NEW TEMPLATE
-
+        @RequestMapping("categories/adultcategorynames")
+        public String showAdultAnimationShows(Model model){
+            model.addAttribute("adultcategories", showStorage.findAllAdultAnimationShowNames());
+            return "adultanimation-template";
     }
 
-        @RequestMapping("categories/{kidsCategoryName}")
-        public String showKidsCartoonShows(@PathVariable String kidsCategoryName, Model model){
-            model.addAttribute("categories", showStorage.findAllKidsShowNames());
-            return "";// TODO MAKE NEW TEMPLATE
+        @RequestMapping("categories/kidscategorynames")
+        public String showKidsCartoonShows(Model model){
+            model.addAttribute("kidscategories", showStorage.findAllKidsShowNames());
+            return "kidscartoons-template";
         }
 
          @RequestMapping("categories/hashtags")
-            public String showAllHashtags(@PathVariable String hashtags, Model model){
+            public String showAllHashtags(Model model){
             model.addAttribute("hashtagNames", hashtagsStorage.findAllHashtags());
             return "hashtags-template";
     }
