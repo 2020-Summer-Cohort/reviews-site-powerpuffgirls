@@ -8,19 +8,23 @@ public class Reviews {
     private String airDate;
     private String description;
     private String image;
+    private Collection<HashtagsStorage> hashTags;
 
 
-    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image) {
-
+    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Collection<HashtagsStorage> hashTags) {
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
         this.description = description;
-
+        this.hashTags = hashTags;
     }
 
     public String getImage() {
         return image;
+    }
+
+    public Collection<HashtagsStorage> getHashTags() {
+        return hashTags;
     }
 
     public String getShowTitle() {

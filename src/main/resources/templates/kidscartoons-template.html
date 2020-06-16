@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./layout.css" />
+    <link href="./layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
     <title>Review Site</title>
   </head>
   <body>
@@ -16,17 +17,13 @@
       </header>
       <main>
         <div class="kids-cartoons">
-          <a href="SUreview.html">
-            <h2>Steven Universe</h2>
-          </a>
-
-          <a href="PPGreview.html">
-            <h2>Power Puff Girls</h2>
-          </a>
+          <li th:each="animation: ${kidscategories}">
+            <a th:text= "${animation}" th:href="@{'/categories/'+${kidscategories}}"></a>
+          </li>
         </div>
       </main>
       <footer>
-        <a href="categories.html">Back To org.wecancodeit.reviews.Categories!</a>
+        <a href="/categories">Back To Categories!</a>
       </footer>
     </div>
   </body>
