@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kids category template</title>
+
+</head>
+<body>
+<main>
+    <ul class="hashtags">
+        <li th:each="hashTag: ${hashtagNames}">
+            <a th:text= "${hashTag}" th:href="@{'/categories/'+${hashTag}}"></a>
+        </li>
+    </ul>
+</body>
+</html>
