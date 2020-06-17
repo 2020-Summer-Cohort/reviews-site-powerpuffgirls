@@ -7,7 +7,7 @@ public class Reviews {
     private int showRating;
     private String airDate;
     private String description;
-    private String image;
+    public String image;
     private Collection<Hashtags> hashTags;
 
     public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Collection<Hashtags> hashTags) {
