@@ -1,27 +1,73 @@
 package org.wecancodeit.reviews;
 
-public class Categories {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Collection;
 
-        private String adultAnimation;
-        private String kidsShows;
-        private String tags;
 
-        public Categories(String adultAnimation, String kidsShows, String tags) {
-            this.adultAnimation = adultAnimation;
-            this.kidsShows = kidsShows;
-            this.tags = tags;
+    @Entity
+    public class Categories {
+        @Id
+        @GeneratedValue
+        private long id;
+        private String name;
+        @OneToMany(mappedBy = "categories")
+        private Collection<Shows> shows;
+
+        protected Categories() {
         }
-        public String getAdultAnimation() {
-            return adultAnimation;
+
+        public Categories(String name) {
+            this.name = name;
         }
 
-        public String getKidsShows() {
-            return kidsShows;
+        public String getName() {
+            return name;
         }
 
-        public String getTags() {
-            return tags;
+
+        public long getId() {
+            return id;
+        }
+
+        public Collection<Shows> getShows() {
+            return shows;
+        }
+
+        @Override
+        public String toString() {
+            return "Categories{" +
+                    "id=" + id +
+                    ", name='" + name + '\'' +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Categories categories = (Categories) o;
+
+            if (id != categories.id) return false;
+            if (name != null ? !name.equals(categories.name) : categories.name != null) {
+            } return false;
+        }
+
+        @Override
+        public int hashCode() {
+            int result = (int) (id ^ (id >>> 32));
+            result = 31 * result + (name != null ? name.hashCode() : 0);
+            return result;
         }
     }
+
+
+
+
+
+
 
 

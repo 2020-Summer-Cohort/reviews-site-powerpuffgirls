@@ -11,20 +11,20 @@ import java.util.Map;
 public class ReviewsController {
 
         Map<String, Reviews> reviews = new HashMap<>();
-        ReviewStorage reviewStorage;
+        private ReviewStorage reviewStorage;
 
         public ReviewsController(ReviewStorage reviewStorage) {
           this.reviewStorage = reviewStorage;
         }
             @RequestMapping("reviews/{showTitle}")
             public String showSingleReview(@PathVariable String showTitle, Model model){
-            model.addAttribute("reviews", reviewStorage.findReviewByTitle(showTitle));
+//            model.addAttribute("reviews", reviewStorage.findReviewByTitle(showTitle));
             return "review-template";
     }
 
             @RequestMapping("reviews/{hashtagName}")
             public String showReviewsAssociatedWithHashtag(@PathVariable String hashtagName, Model model){
-            model.addAttribute("reviews", reviewStorage.findReviewByHashtag(hashtagName));
+//            model.addAttribute("reviews", reviewStorage.findReviewByHashtag(hashtagName));
             return "review-template"; //need to make a new template and insert instead
     }
 
