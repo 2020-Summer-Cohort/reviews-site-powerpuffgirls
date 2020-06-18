@@ -23,7 +23,7 @@ public class CategoryController {
 
         @RequestMapping("categories/{categoryName}")
         public String showAdultAnimationShows(Model model, @PathVariable String categoryName){
-            model.addAttribute("adultcategories", categoryStorage.findCategoriesByName(categoryName).getShows());
+            model.addAttribute("category", categoryStorage.findCategoriesByName(categoryName));
             return "sub-category-template";// category template th: text h1 element
     }
 

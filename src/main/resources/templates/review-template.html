@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/layout.css"  rel="stylesheet"/>
   <link href="/style.css" rel="stylesheet"/>
-  <title th:text="${reviews.showTitle}"></title>
+<!--  <title th:text="${reviews.name}"></title>-->
 </head>
 <body>
 <div class="container">
@@ -32,11 +32,11 @@
       <p th:text="${reviews.description}></p>
       <p th:text="${reviews.showRating}></p>
       </p>
-      <ul>
-        <li th:each="hashTag: ${reviews.hashTags}">
-          <a th:text= "${hashTag}" th:href="@{'/reviews/'+${hashTag}}"></a>
-        </li>
-      </ul>
+<!--      <ul>-->
+<!--        <li th:each="hashtags: ${reviews.hashtags}">-->
+<!--          <a th:text= "${hashtags}" th:href="@{'/reviews/'+${hashtags}}"></a>-->
+<!--        </li>-->
+<!--      </ul>-->
     </div>
   </main>
   <footer>
