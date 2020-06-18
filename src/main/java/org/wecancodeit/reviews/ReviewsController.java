@@ -18,7 +18,8 @@ public class ReviewsController {
         }
             @RequestMapping("reviews/{showTitle}")
             public String showSingleReview(@PathVariable String showTitle, Model model){
-            model.addAttribute("reviews", reviewStorage.findAllReviews());
+            model.addAttribute("reviews", reviewStorage.findReviewsByShowTitle(showTitle).getDescription());
+//                model.addAttribute("adultcategories", categoryStorage.findCategoriesByName(categoryName).getShows());
             return "review-template";
     }
 
