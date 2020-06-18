@@ -15,6 +15,7 @@ public class CategoryController {
     ShowStorage showStorage = new ShowStorage(showsRepo);
 //    HashtagsStorage hashtagsStorage = new HashtagsStorage();
 
+        public CategoryController(CategoriesRepository categoriesRepo, )
         @RequestMapping("categories")
         public String showAllCategories(Model model){
             model.addAttribute("categoryNames", categoryStorage.findAllCategories());
@@ -23,13 +24,13 @@ public class CategoryController {
 
         @RequestMapping("categories/adultcategorynames")
         public String showAdultAnimationShows(Model model){
-            model.addAttribute("adultcategories", showStorage.findAllAdultAnimationShowNames());
+            model.addAttribute("adultcategories", categoryStorage.findCategoriesByName("Adult Animation").getShows());
             return "adultanimation-template";
     }
 
         @RequestMapping("categories/kidscategorynames")
         public String showKidsCartoonShows(Model model){
-            model.addAttribute("kidscategories", showStorage.findAllKidsShowNames());
+            model.addAttribute("kidscategories", categoryStorage.findCategoriesByName("Kids Cartoons").getShows());
             return "kidscartoons-template";
         }
 

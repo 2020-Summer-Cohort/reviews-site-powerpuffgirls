@@ -29,12 +29,14 @@ public class ShowStorage {
     }
 
     public Shows findShowsByName(String title) {
-        return showsRepo.findByTitle(title);
+        return showsRepo.findByShowTitle(title);
     }
 
     public Iterable<Shows> findAllShows() {
         return showsRepo.findAll();
     }
+
+
 
 }
 
