@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
+  <link href="/layout.css"  rel="stylesheet"/>
+  <link href="/style.css" rel="stylesheet"/>
   <title th:text="${reviews.showTitle}"></title>
 </head>
 <body>
@@ -17,11 +18,7 @@
     <div class="super-jail">
       <div class="super-jail-pic">
         <p th:text="${reviews.image}"></p>
-<!--        <img-->
-<!--                src="./static/images/superjail.JPG"-->
-<!--                alt="SuperJail"-->
-<!--                style="width: 300px; height: 400px;"-->
-<!--        />-->
+
       </div>
       <p>
         <strong>
