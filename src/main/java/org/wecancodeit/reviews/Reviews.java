@@ -1,34 +1,39 @@
 package org.wecancodeit.reviews;
 
+import javax.persistence.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
+@Entity
 public class Reviews {
-    private String showTitle;
+    @Id
+    @GeneratedValue
+    private long id;
     private int showRating;
     private String airDate;
     private String description;
     private String image;
-    private Collection<Hashtags> hashTags;
+    @ManyToOne
+    private Shows showTitle;
+    @ManyToMany
+    private Collection<Hashtags> hashtags;
 
-    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Collection<Hashtags> hashTags) {
+    protected Reviews(){}
+
+    public Reviews(Shows showTitle, Integer showRating, String airDate, String description, String image, Hashtags... hashtags){
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
         this.description = description;
-        this.hashTags = hashTags;
+        this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
 
     public String getImage() {
         return image;
     }
 
-    public Collection<Hashtags> getHashTags() {
-        return hashTags;
-    }
-
-    public String getShowTitle() {
-        return showTitle;
-    }
 
     public int getShowRating() {
         return showRating;
@@ -40,5 +45,17 @@ public class Reviews {
 
     public String getDescription() {
         return description;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public Shows getShowTitle() {
+        return showTitle;
+    }
+
+    public Collection<Hashtags> getHashtags() {
+        return hashtags;
     }
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/layout.css"  rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+
+
+    <title>Review Site</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>
+            Cartoon Show Reviews
+        </h1>
+    </header>
+
+    <main>
+        <div class="main-categories">
+
+          <ul>
+            <li th:each="category: ${categoryNames}">
+              <a th:text= "${category.name}" th:href="@{'/categories/'+${category.name}}"></a>
+            </li>
+          </ul>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</div>
+</body>
+</html>
