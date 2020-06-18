@@ -10,7 +10,7 @@ import java.util.Map;
 @Controller
 public class ReviewsController {
 
-        Map<String, Reviews> reviews = new HashMap<>();
+//        Map<String, Reviews> reviews = new HashMap<>();
         private ReviewStorage reviewStorage;
 
         public ReviewsController(ReviewStorage reviewStorage) {
@@ -18,7 +18,7 @@ public class ReviewsController {
         }
             @RequestMapping("reviews/{showTitle}")
             public String showSingleReview(@PathVariable String showTitle, Model model){
-//            model.addAttribute("reviews", reviewStorage.findReviewByTitle(showTitle));
+            model.addAttribute("reviews", reviewStorage.findAllReviews());
             return "review-template";
     }
 

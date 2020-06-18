@@ -2,7 +2,6 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -25,7 +24,7 @@ public class CategoryController {
         @RequestMapping("categories/{categoryName}")
         public String showAdultAnimationShows(Model model, @PathVariable String categoryName){
             model.addAttribute("adultcategories", categoryStorage.findCategoriesByName(categoryName).getShows());
-            return "adultanimation-template";// category template th: text h1 element
+            return "sub-category-template";// category template th: text h1 element
     }
 
 //        @RequestMapping("categories/kidscategorynames")

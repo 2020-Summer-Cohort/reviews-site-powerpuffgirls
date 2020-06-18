@@ -14,15 +14,16 @@
   <body>
     <div class="container">
       <header>
-        <h1>
-          Adult Animation
+        <h1
+         th:text="${categoryName}">
         </h1>
       </header>
       <main>
-        <div class="adult-animation">
+        <div class=>
           <ul>
           <li th:each="animation: ${adultcategories}">
-            <a th:text= "${animation.getShowTitle()}" th:href="@{'/categories/'+${adultcategories}}"></a>
+            <a th:text= "${animation.showTitle}" th:href="@{'/categories/'+${adultcategories}}"></a>
+<!--            //showtitle is red but working-->
           </li>
           </ul>
         </div>
@@ -30,9 +31,7 @@
       <footer>
       <a href="/categories">Back To Categories!</a>
       </footer>
-     
-gaoijff
-  
+
     </div>
   </body>
 </html>
