@@ -22,7 +22,7 @@
         <div class="adult-animation">
           <ul>
           <li th:each="animation: ${adultcategories}">
-            <a th:text= "${animation}" th:href="@{'/categories/'+${adultcategories}}"></a>
+            <a th:text= "${animation.getShowTitle()}" th:href="@{'/categories/'+${adultcategories}}"></a>
           </li>
           </ul>
         </div>
