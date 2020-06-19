@@ -71,3 +71,7 @@ p {
   background-color: var(--color1-aero-blue);
   font-family: "Quicksand", sans-serif;
 }
+
+li{
+  list-style-type: none;
+}
