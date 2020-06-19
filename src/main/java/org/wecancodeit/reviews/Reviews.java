@@ -13,16 +13,16 @@ public class Reviews {
     private long id;
     private int showRating;
     private String airDate;
+    @Lob
     private String description;
     private String image;
-    @ManyToOne
-    private Shows showTitle;
+    private String showTitle;
     @ManyToMany
     private Collection<Hashtags> hashtags;
 
     protected Reviews(){}
 
-    public Reviews(Shows showTitle, Integer showRating, String airDate, String description, String image, Hashtags... hashtags){
+    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Hashtags... hashtags){
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
@@ -51,7 +51,7 @@ public class Reviews {
         return id;
     }
 
-    public Shows getShowTitle() {
+    public String getShowTitle() {
         return showTitle;
     }
 

@@ -41,12 +41,12 @@ public class Populator implements CommandLineRunner {
         hashtagsRepo.save(hashtag2);
         hashtagsRepo.save(hashtag3);
 
-        Reviews review1 = new Reviews(show1, 3, "November 18, 1998", "ppg desc.",
+        Reviews review1 = new Reviews("Powerpuff Girls", 3, "November 18, 1998", "ppg desc.",
                 "./powerpuff-girls.png", hashtag1, hashtag3);
-        Reviews review2 = new Reviews(show2, 5, "November 4, 2013", "steven universe desc.", "./steven-universe.png", hashtag1, hashtag3);
-        Reviews review3 = new Reviews(show3, 5, "September 28, 2008", "Good show", "./superjail.jpg",
+        Reviews review2 = new Reviews("Steven Universe", 5, "November 4, 2013", "steven universe desc.", "./steven-universe.png", hashtag1, hashtag3);
+        Reviews review3 = new Reviews("Superjail", 5, "September 28, 2008", "Good show", "./superjail.jpg",
                 hashtag1);
-        Reviews review4 = new Reviews(show4, 4, "January 4, 2007", "Afro Samurai desc ", "./afro-samurai.png", hashtag2);
+        Reviews review4 = new Reviews("Afro Samurai", 4, "January 4, 2007", "Afro Samurai desc ", "./afro-samurai.png", hashtag2);
 
         reviewRepo.save(review1);
         reviewRepo.save(review2);
