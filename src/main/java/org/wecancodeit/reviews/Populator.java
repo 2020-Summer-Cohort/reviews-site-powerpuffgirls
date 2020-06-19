@@ -57,6 +57,12 @@ import org.springframework.stereotype.Component;
                     "            feudal however some characters have androids and other futuristic\n" +
                     "            technology. The show focuses on battles between the eponymous\n" +
                     "            character and others who are seeking the headband.", "./afro-saurai.png", hashtag2);
+
+            reviewRepo.save(review1);
+            reviewRepo.save(review2);
+            reviewRepo.save(review3);
+            reviewRepo.save(review4);
+
         }
     }
 
