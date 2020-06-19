@@ -45,10 +45,10 @@ import org.springframework.stereotype.Component;
                     "./powerpuff-girls.png", hashtag1, hashtag3);
 
             Reviews review2 = new Reviews(show2, 5, "November 4, 2013", "Is honestly a great animated series for all ages. It tackles\n" +
-                    "            everyday issues with such depth and complexity that children can\n" +
-                    "            digest and adults can fully grasp. In terms of characters is one the\n" +
-                    "            most diverse shows on television in racial and LGBT representation.\n" +
-                    "            Perfectly blending themes of love,trauma and growth realistically.\n" +
+//                    "            everyday issues with such depth and complexity that children can\n" +
+//                    "            digest and adults can fully grasp. In terms of characters is one the\n" +
+//                    "            most diverse shows on television in racial and LGBT representation.\n" +
+//                    "            Perfectly blending themes of love,trauma and growth realistically.\n" +
                     "            My personal favorite part of the series is the allusion to 90's\n" +
                     "            Japanese RPG's and Shojo series.", "./steven-universe.png", hashtag1, hashtag3);
             Reviews review3 = new Reviews(show3, 5, "September 28, 2008", "Good show", "./superjail.jpg",
@@ -56,8 +56,8 @@ import org.springframework.stereotype.Component;
 
             Reviews review4 = new Reviews(show4, 4, "January 4, 2007", "Afro Samurai focuses on a samurai named Afro whose mission is to get\n" +
                     "            the number 1 headband and avenge his father. The setting is somewhat\n" +
-                    "            feudal however some characters have androids and other futuristic\n" +
-                    "            technology. The show focuses on battles between the eponymous\n" +
+//                    "            feudal however some characters have androids and other futuristic\n" +
+//                    "            technology. The show focuses on battles between the eponymous\n" +
                     "            character and others who are seeking the headband.", "./afro-saurai.png", hashtag2);
 
             reviewRepo.save(review1);
