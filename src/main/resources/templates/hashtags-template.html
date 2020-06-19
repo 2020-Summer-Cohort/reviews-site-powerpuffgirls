@@ -18,7 +18,12 @@
     </header>
     <main>
         <div>
-            <p th:each="review : ${hashtag.reviews}" th:text="${review.showTitle}"></p>
+            <ul>
+                <li href th:each="review : ${hashtag.reviews}">
+                <a th:text="${review.showTitle}" th:href="@{'/reviews/'+${review.showTitle}}">
+                </a>
+                </li>
+            </ul>
 
         </div>
     </main>
