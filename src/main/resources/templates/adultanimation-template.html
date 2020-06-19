@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./layout.css" th:href="@{/css/Layout.css}" rel="stylesheet" />
+
+  <title>Review Site</title>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>
+      Adult Animation
+    </h1>
+  </header>
+  <main>
+    <div class="adult-animation">
+      <ul>
+        <li th:each="animation: ${adultcategories}">
+          <a th:text= "${animation}" th:href="@{'/categories/'+${adultcategories}}"></a>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <a href="/categories">Back To Categories!</a>
+  </footer>
+
+
+
+</div>
+</body>
+</html>
