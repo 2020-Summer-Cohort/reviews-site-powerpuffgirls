@@ -13,6 +13,7 @@ public class ReviewsController {
 
     //        Map<String, Reviews> reviews = new HashMap<>();
     private ReviewStorage reviewStorage;
+    private HashtagsStorage hashtagsStorage;
 
     public ReviewsController(ReviewStorage reviewStorage) {
         this.reviewStorage = reviewStorage;
@@ -27,8 +28,8 @@ public class ReviewsController {
 
     @RequestMapping("hashtags/{hashtagName}")
     public String showReviewsAssociatedWithHashtag(@PathVariable String hashtagName, Model model) {
-//            model.addAttribute("reviews", reviewStorage.findReviewByHashtag(hashtagName));
-        return "review-template"; //need to make a new template and insert instead
+            model.addAttribute("hashtags", hashtagsStorage.findHashtagsByReviews(hashtagName));
+        return "hashtags-template"; //need to make a new template and insert instead
     }
 
 }
