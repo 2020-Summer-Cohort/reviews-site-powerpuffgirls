@@ -14,7 +14,9 @@
 <body>
 <div class="container">
   <header>
-    <h2 th:text="${reviews.showTitle}"></h2>
+    <h2 th:each="reviews: ${reviews}">
+
+    </h2>
   </header>
 
   <main>
@@ -29,14 +31,14 @@
         </strong>
       </p>
       <p>
-      <p th:text="${reviews.description}></p>
-      <p th:text="${reviews.showRating}></p>
+      <p th:text="${reviews.description}"></p>
+      <p th:text="${reviews.showRating}"></p>
       </p>
-<!--      <ul>-->
-<!--        <li th:each="hashtags: ${reviews.hashtags}">-->
-<!--          <a th:text= "${hashtags}" th:href="@{'/reviews/'+${hashtags}}"></a>-->
-<!--        </li>-->
-<!--      </ul>-->
+      <ul>
+        <li th:each="hashtags: ${reviews.hashtags}">
+          <a th:text= "${hashtags.hashtagName}" th:href="@{'/reviews/'+${hashtags.hashtagName}}"></a>
+        </li>
+      </ul>
     </div>
   </main>
   <footer>
