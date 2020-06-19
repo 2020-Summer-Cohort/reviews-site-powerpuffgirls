@@ -36,7 +36,7 @@
       </p>
       <ul>
         <li th:each="hashtags: ${reviews.hashtags}">
-          <a th:text= "${hashtags.hashtagName}" th:href="@{'/reviews/'+${hashtags.hashtagName}}"></a>
+          <a th:text= "${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}"></a>
         </li>
       </ul>
     </div>

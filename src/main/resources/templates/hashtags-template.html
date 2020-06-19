@@ -13,12 +13,13 @@
 <div class="container">
     <header>
 
-        <h2 th:each="hashtags: ${hashtags}">
+        <h2 th:text="${hashtag.hashtagName}">
         </h2>
     </header>
     <main>
         <div>
-            <a href="review-template.html"></a>
+            <p th:each="review : ${hashtag.reviews}" th:text="${review.showTitle}"></p>
+
         </div>
     </main>
     <footer>

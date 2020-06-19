@@ -18,5 +18,9 @@ public class HashtagsStorage {
     public Iterable<Hashtags> findAllHashtags() {
         return hashtagsRepo.findAll();
     }
+
+    public Hashtags findById(Long hashtagID) {
+        return hashtagsRepo.findById(hashtagID).get();
+    }
 }
 

@@ -15,9 +15,11 @@ public class ReviewsController {
     private ReviewStorage reviewStorage;
     private HashtagsStorage hashtagsStorage;
 
-    public ReviewsController(ReviewStorage reviewStorage) {
+    public ReviewsController(ReviewStorage reviewStorage, HashtagsStorage hashtagsStorage) {
         this.reviewStorage = reviewStorage;
+        this.hashtagsStorage = hashtagsStorage;
     }
+
 
     @RequestMapping("reviews/{showTitle}")
     public String showSingleReview(@PathVariable String showTitle, Model model) {
@@ -26,9 +28,9 @@ public class ReviewsController {
         return "review-template";
     }
 
-    @RequestMapping("hashtags/{hashtagName}")
-    public String showReviewsAssociatedWithHashtag(@PathVariable String hashtagName, Model model) {
-            model.addAttribute("hashtags", hashtagsStorage.findHashtagsByReviews(hashtagName));
+    @RequestMapping("hashtags/{hashtagID}")
+    public String showReviewsAssociatedWithHashtag(@PathVariable Long hashtagID, Model model) {
+        model.addAttribute("hashtag", hashtagsStorage.findById(hashtagID));
         return "hashtags-template"; //need to make a new template and insert instead
     }
 
