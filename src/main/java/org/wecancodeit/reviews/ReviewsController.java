@@ -35,7 +35,7 @@ public class ReviewsController {
     }
     @PostMapping("hashtags/add")
     public String addNewHashtag(String hashtag){
-        return "redirect:/";
+        return "redirect:/categories";
     }
 //    @PostMapping("campuses/add")
 //    public String addNewCampus(String name, String description) {
