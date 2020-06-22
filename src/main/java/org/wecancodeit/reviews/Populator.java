@@ -44,7 +44,7 @@ public class Populator implements CommandLineRunner {
         Reviews review1 = new Reviews("Powerpuff Girls", 3, "November 18, 1998",
                 "This was my favorite show growing up! I always wanted to be a power puff girl." +
                         " I loved their tenacity and the show has great villains. ",
-                "./powerpuff-girls.png", hashtag1, hashtag3);
+                "/images/powerpuffgirlsimage.png", hashtag1, hashtag3);
 
         Reviews review2 = new Reviews("Steven Universe", 5, "November 4, 2013",
                 "is honestly a great animated series for all ages. It tackles everyday issues with " +
@@ -52,14 +52,14 @@ public class Populator implements CommandLineRunner {
                         " of characters is one the most diverse shows on television in racial and LGBT representation." +
                         " Perfectly blending themes of love,trauma and growth realistically. My personal favorite part" +
                         " of the series is the allusion to 90's Japanese RPG's and Shojo series.",
-                "./steven-universe.png", hashtag1, hashtag3);
+                "/images/steven-universe.png", hashtag1, hashtag3);
 
         Reviews review3 = new Reviews("Superjail", 5, "September 28, 2008",
                 "Takes place in another dimension, in an eponymous jail inside of a volcano." +
                         "  Superjail is a psychedelic very violent show that focuses on different" +
                         " aspects of this fictional jail, it mostly operates as a comedy for adults. " +
                         "Themes are often about conflicts between prisoners.",
-                "./superjail.jpg",
+                "/images/superjail.jpg",
                 hashtag1, hashtag2);
 
         Reviews review4 = new Reviews("Afro Samurai", 4, "January 4, 2007",
@@ -67,7 +67,7 @@ public class Populator implements CommandLineRunner {
                         " get the number 1 headband and avenge his father. The setting is somewhat feudal however some " +
                         "characters have androids and other futuristic technology." +
                         " The show focuses on battles between the eponymous character and others who are seeking the headband",
-                "./afro-samurai.png", hashtag2);
+                "/images/afro-samurai.png", hashtag2);
 
         reviewRepo.save(review1);
         reviewRepo.save(review2);
