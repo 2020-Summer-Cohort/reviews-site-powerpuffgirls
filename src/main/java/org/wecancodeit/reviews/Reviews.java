@@ -5,6 +5,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.awt.image.BufferedImage;
 
 @Entity
 public class Reviews {
@@ -15,14 +16,14 @@ public class Reviews {
     private String airDate;
     @Lob
     private String description;
-    private String image;
+    private BufferedImage image;
     private String showTitle;
     @ManyToMany
     private Collection<Hashtags> hashtags;
 
     protected Reviews(){}
 
-    public Reviews(String showTitle, Integer showRating, String airDate, String description, String image, Hashtags... hashtags){
+    public Reviews(String showTitle, Integer showRating, String airDate, String description, BufferedImage image, Hashtags... hashtags){
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
@@ -30,7 +31,7 @@ public class Reviews {
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
 
-    public String getImage() {
+    public BufferedImage getImage() {
         return image;
     }
 
