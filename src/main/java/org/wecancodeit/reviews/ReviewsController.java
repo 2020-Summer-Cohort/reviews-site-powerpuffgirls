@@ -2,6 +2,7 @@ package org.wecancodeit.reviews;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.HashMap;
@@ -32,6 +33,15 @@ public class ReviewsController {
         model.addAttribute("hashtag", hashtagsStorage.findById(hashtagID));
         return "hashtags-template"; //need to make a new template and insert instead
     }
+    @PostMapping("hashtags/add")
+    public String addNewHashtag(String hashtag){
+        return "redirect:/";
+    }
+//    @PostMapping("campuses/add")
+//    public String addNewCampus(String name, String description) {
+//        if(campusStorage.findCampusByName(name)!=null){
+//            return "redirect:/";
+//        }
 
 }
 
