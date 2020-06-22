@@ -11,9 +11,11 @@ import java.util.Map;
 @Controller
 public class ReviewsController {
 
+
     //        Map<String, Reviews> reviews = new HashMap<>();
     private ReviewStorage reviewStorage;
     private HashtagsStorage hashtagsStorage;
+    private Hashtags hashtags;
 
     public ReviewsController(ReviewStorage reviewStorage, HashtagsStorage hashtagsStorage) {
         this.reviewStorage = reviewStorage;
@@ -37,12 +39,22 @@ public class ReviewsController {
     public String addNewHashtag(String hashtag){
         return "redirect:/categories";
     }
+
+//    add new hashtags
+//    Hashtags hashtagsToAdd = new Hashtags(hashtags);
+//        HashtagsStorage.addHashtags(hashtagsToAdd);
+//        return "redirect:/categories";
+
+//    Campus campusToAdd = new Campus(name, description);
+//        campusStorage.addCampus(campusToAdd);
+//        return "redirect:/";
+//}
+}
 //    @PostMapping("campuses/add")
 //    public String addNewCampus(String name, String description) {
 //        if(campusStorage.findCampusByName(name)!=null){
 //            return "redirect:/";
 //        }
 
-}
 
 

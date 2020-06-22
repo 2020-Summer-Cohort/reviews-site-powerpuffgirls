@@ -22,6 +22,13 @@ import org.springframework.stereotype.Service;
         return reviewRepo.findAll();
     }
 
+    public void addHashtags(Hashtags hashtags){
+        reviewRepo.save(hashtags);
+    }
+//     public void addCampus(Campus campus) {
+//        campusRepo.save(campus);
+//    }
+
     }
 
 

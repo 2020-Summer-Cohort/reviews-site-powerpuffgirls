@@ -27,7 +27,6 @@ public class Reviews {
         this.showRating = showRating;
         this.airDate = airDate;
         this.description = description;
-        this.imageUrl = imageUrl;
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
 
