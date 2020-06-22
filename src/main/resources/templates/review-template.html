@@ -14,7 +14,8 @@
 <body>
 <div class="container">
   <header>
-    <h2 th:each="reviews: ${reviews}">
+    <h2 th:each="reviews: ${reviews}"
+    <h2 th:text="${reviews.showTitle}">
 
     </h2>
   </header>

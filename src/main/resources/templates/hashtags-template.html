@@ -20,9 +20,10 @@
         <div>
             <ul>
                 <li href th:each="review : ${hashtag.reviews}">
-                <a th:text="${review.showTitle}" th:href="@{'/reviews/'+${review.showTitle}}">
-                </a>
+                    <a th:text="${review.showTitle}" th:href="@{'/reviews/'+${review.showTitle}}">
+                    </a>
                 </li>
+
             </ul>
 
         </div>
