@@ -69,4 +69,8 @@ public class Reviews {
         return id == reviews.id &&
                 Objects.equals(hashtags, reviews.hashtags);
     }
+
+    public void addHashtag(Hashtags hashtagToAdd) {
+        hashtags.add(hashtagToAdd);
+    }
 }

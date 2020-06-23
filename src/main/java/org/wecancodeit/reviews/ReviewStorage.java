@@ -25,6 +25,10 @@ import org.wecancodeit.reviews.model.Reviews;
         return reviewRepo.findAll();
     }
 
+    public void save(Reviews reviews) {
+        reviewRepo.save(reviews);
+    }
+
 //    public void saveHashtags(Hashtags hashtags){
 //        reviewRepo.save(hashtags);
 //    }

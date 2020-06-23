@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.reviews.model.Hashtags;
+import org.wecancodeit.reviews.model.Reviews;
 
 @Controller
 public class ReviewsController {
@@ -34,10 +35,13 @@ public class ReviewsController {
         return "hashtags-template"; //need to make a new template and insert instead
     }
     @PostMapping("hashtags/add")
-    public String addNewHashtag(String hashtag){
-        Hashtags hashtagToAdd = new Hashtags(hashtag);
+    public String addNewHashtag(String hashtagName, String showTitle){
+        Hashtags hashtagToAdd = new Hashtags(hashtagName);
         hashtagsStorage.saveHashtags(hashtagToAdd);
-        return "redirect:/reviews/";
+        Reviews reviews = reviewStorage.findReviewsByShowTitle(showTitle);
+        reviews.addHashtag(hashtagToAdd);
+        reviewStorage.save(reviews);
+        return "redirect:/reviews/" + showTitle;
     }
 
 //    add new hashtags

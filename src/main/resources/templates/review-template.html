@@ -61,9 +61,10 @@
 <!--      </label>-->
 <!--      <input type="text" name="description" id="">-->
 <!--      <input type="hidden" name="campusId" th:value = "${campus.id}" id="">-->
-    <form action="hashtags/add" method="POST">
+    <form action="/hashtags/add" method="POST">
       <label for="new-hashtags__name-input" >New hashtag name:</label>
       <input type="text" name="hashtagName" id="new-hashtags__name-input">
+      <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
       <button type="submit">Submit</button>
     </form>
 
