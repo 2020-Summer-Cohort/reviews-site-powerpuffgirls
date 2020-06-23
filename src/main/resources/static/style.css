@@ -52,6 +52,13 @@ a:visited {
   background-color: var(--color4-green-sheen);
 }
 
+.hashtag-input{
+  font-family: "Questrial", sans-serif;
+  border: #285943;
+  border-radius: 5px;
+}
+
+
 header h1 {
   font-family: "Bangers", cursive;
   font-size: 65px;

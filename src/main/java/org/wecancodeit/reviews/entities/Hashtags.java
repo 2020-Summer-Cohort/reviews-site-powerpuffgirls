@@ -1,4 +1,4 @@
-package org.wecancodeit.reviews.model;
+package org.wecancodeit.reviews.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,7 +28,8 @@ public class Hashtags {
     private Collection<Reviews> reviews;
 
 
-    protected Hashtags(){}
+    protected Hashtags() {
+    }
 
     public Hashtags(String hashtagName) {
         this.hashtagName = hashtagName;

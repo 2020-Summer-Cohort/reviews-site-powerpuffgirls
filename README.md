@@ -1,4 +1,4 @@
-# org.wecancodeit.reviews.model.Reviews Site
+# org.wecancodeit.reviews.entities.Reviews Site
 
 ## Module 3 Group Project
 

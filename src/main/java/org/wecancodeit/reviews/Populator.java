@@ -3,10 +3,14 @@ package org.wecancodeit.reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.wecancodeit.reviews.model.Categories;
-import org.wecancodeit.reviews.model.Hashtags;
-import org.wecancodeit.reviews.model.Reviews;
-import org.wecancodeit.reviews.model.Shows;
+import org.wecancodeit.reviews.entities.Categories;
+import org.wecancodeit.reviews.entities.Hashtags;
+import org.wecancodeit.reviews.entities.Reviews;
+import org.wecancodeit.reviews.entities.Shows;
+import org.wecancodeit.reviews.storage.repositories.CategoriesRepository;
+import org.wecancodeit.reviews.storage.repositories.HashtagsRepository;
+import org.wecancodeit.reviews.storage.repositories.ReviewRepository;
+import org.wecancodeit.reviews.storage.repositories.ShowsRepository;
 
 @Component
 public class Populator implements CommandLineRunner {

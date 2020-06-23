@@ -1,17 +1,19 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.controllers;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.wecancodeit.reviews.model.Hashtags;
-import org.wecancodeit.reviews.model.Reviews;
+import org.wecancodeit.reviews.storage.ReviewStorage;
+import org.wecancodeit.reviews.entities.Hashtags;
+import org.wecancodeit.reviews.entities.Reviews;
+import org.wecancodeit.reviews.storage.HashtagsStorage;
 
 @Controller
 public class ReviewsController {
 
 
-    //        Map<String, Reviews> reviews = new HashMap<>();
     private ReviewStorage reviewStorage;
     private HashtagsStorage hashtagsStorage;
     private Hashtags hashtags;
@@ -25,7 +27,7 @@ public class ReviewsController {
     @RequestMapping("reviews/{showTitle}")
     public String showSingleReview(@PathVariable String showTitle, Model model) {
         model.addAttribute("reviews", reviewStorage.findReviewsByShowTitle(showTitle));
-//                model.addAttribute("adultcategories", categoryStorage.findCategoriesByName(categoryName).getShows());
+
         return "review-template";
     }
 
@@ -34,8 +36,9 @@ public class ReviewsController {
         model.addAttribute("hashtag", hashtagsStorage.findById(hashtagID));
         return "hashtags-template"; //need to make a new template and insert instead
     }
+
     @PostMapping("hashtags/add")
-    public String addNewHashtag(String hashtagName, String showTitle){
+    public String addNewHashtag(String hashtagName, String showTitle) {
         Hashtags hashtagToAdd = new Hashtags(hashtagName);
         hashtagsStorage.saveHashtags(hashtagToAdd);
         Reviews reviews = reviewStorage.findReviewsByShowTitle(showTitle);
@@ -44,21 +47,4 @@ public class ReviewsController {
         return "redirect:/reviews/" + showTitle;
     }
 
-//    add new hashtags
-//    Hashtags hashtagsToAdd = new Hashtags(hashtags);
-//        HashtagsStorage.addHashtags(hashtagsToAdd);
-//        return "redirect:/categories";
-
-//    Campus campusToAdd = new Campus(name, description);
-//        campusStorage.addCampus(campusToAdd);
-//        return "redirect:/";
-//}
 }
-//    @PostMapping("campuses/add")
-//    public String addNewCampus(String name, String description) {
-//        if(campusStorage.findCampusByName(name)!=null){
-//            return "redirect:/";
-//        }
-
-
-

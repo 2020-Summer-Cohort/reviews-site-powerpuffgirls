@@ -1,7 +1,8 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
-import org.wecancodeit.reviews.model.Hashtags;
+import org.wecancodeit.reviews.storage.repositories.HashtagsRepository;
+import org.wecancodeit.reviews.entities.Hashtags;
 
 @Service
 public class HashtagsStorage {
@@ -24,7 +25,7 @@ public class HashtagsStorage {
         return hashtagsRepo.findById(hashtagID).get();
     }
 
-    public void saveHashtags(Hashtags hashtags){
+    public void saveHashtags(Hashtags hashtags) {
         hashtagsRepo.save(hashtags);
     }
 }

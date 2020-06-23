@@ -1,77 +1,57 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org" lang="en">
-<link href="/layout.css"  rel="stylesheet"/>
+<link href="/layout.css" rel="stylesheet"/>
 <link href="/style.css" rel="stylesheet"/>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/layout.css"  rel="stylesheet"/>
-  <link href="/style.css" rel="stylesheet"/>
-  <title th:text="${reviews.showTitle}"></title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/layout.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+    <title th:text="${reviews.showTitle}"></title>
 </head>
 <body>
 <div class="container">
-  <header>
-    <h2 th:each="reviews: ${reviews}"
-    <h2 th:text="${reviews.showTitle}">
+    <header>
+        <h2 th:each="reviews: ${reviews}"
+        <h2 th:text="${reviews.showTitle}">
 
-    </h2>
-  </header>
+        </h2>
+    </header>
 
-  <main>
-    <div class="super-jail">
-      <div class="super-jail-pic">
-        <img th:src="${reviews.imageUrl}">
-      </div>
-      <p>
-        <strong>
-          <p th:text="${reviews.airDate}"></p>
-        </strong>
-      </p>
-      <p>
-      <p th:text="${reviews.description}"></p>
-      <p th:text="${reviews.showRating}"></p>
-      </p>
-      <ul>
-        <li th:each="hashtags: ${reviews.hashtags}">
-          <a th:text= "${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}"></a>
-        </li>
-      </ul>
-    </div>
-<!--    <form action="hashtags/add" method= "POST">-->
-<!--      <label>-->
-<!--        Hashtag-->
-<!--      </label>-->
-<!--      <input type="text" name="hashtag" id="">&ndash;&gt;-->
-<!--      <input type="hidden" name="hashtag" th:value = "${reviews.hashtags}">-->
-<!--    </form>-->
-<!--    <form action="books/add" method="POST">-->
-<!--      <label>-->
-<!--        Title-->
-<!--      </label>-->
-<!--      <input type="text" name="title" id="">-->
-<!--      <label>-->
-<!--        ISBN-->
-<!--      </label>-->
-<!--      <input type="text" name="isbn" id="">-->
-<!--      <label>-->
-<!--        Description-->
-<!--      </label>-->
-<!--      <input type="text" name="description" id="">-->
-<!--      <input type="hidden" name="campusId" th:value = "${campus.id}" id="">-->
-    <form action="/hashtags/add" method="POST">
-      <label for="new-hashtags__name-input" >New hashtag name:</label>
-      <input type="text" name="hashtagName" id="new-hashtags__name-input">
-      <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
-      <button type="submit">Submit</button>
-    </form>
+    <main>
+        <div class="super-jail">
+            <div class="super-jail-pic">
+                <img th:src="${reviews.imageUrl}">
+            </div>
+            <p>
+                <strong>
+            <p th:text="${reviews.airDate}"></p>
+            </strong>
+            </p>
+            <p>
+            <p th:text="${reviews.description}"></p>
+            <p th:text="${reviews.showRating}"></p>
+            </p>
+            <ul>
+                <li th:each="hashtags: ${reviews.hashtags}">
+                    <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}"></a>
+                </li>
+            </ul>
+        </div>
 
-  </main>
-  <footer>
-    <a href="/categories">Back To Categories!</a>
-  </footer>
+        <form action="/hashtags/add" method="POST" class="hashtag-input">
+            <label for="new-hashtags__name-input">New hashtag name:</label>
+            <input type="text" name="hashtagName" id="new-hashtags__name-input">
+            <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
+            <button type="submit">Submit</button>
+        </form>
+
+    </main>
+    <footer>
+        <a href="/categories">Back To Categories!</a>
+    </footer>
 </div>
 </body>
 </html>
