@@ -24,12 +24,13 @@
 
           <ul>
             <li class="categories" th:each="category: ${categoryNames}">
-              <a th:text= "${category.name}" th:href="@{'/categories/'+${category.name}}"></a>
+              <a class="categories" th:text= "${category.name}" th:href="@{'/categories/'+${category.name}}"></a>
             </li>
           </ul>
         </div>
     </main>
     <footer>
+
     </footer>
 </div>
 </body>
