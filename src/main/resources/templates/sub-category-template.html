@@ -21,7 +21,7 @@
       <main>
         <div class=>
           <ul>
-          <li th:each="animation: ${category.shows}">
+          <li class="sub-category" th:each="animation: ${category.shows}">
             <a th:text= "${animation.showTitle}" th:href="@{'/reviews/'+${animation.showTitle}}"></a>
 <!--            //showtitle is red but working-->
           </li>

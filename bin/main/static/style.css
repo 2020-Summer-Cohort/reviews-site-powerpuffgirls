@@ -39,7 +39,7 @@ a:visited {
 .categories {
   display: inline-block;
   border-radius: 50%;
-  font-size: xx-large;
+  font-size: x-large;
   padding: 50px;
   font-family: "Questrial", sans-serif;
 }
@@ -73,17 +73,7 @@ p {
   font-family: "Quicksand", sans-serif;
 }
 
-.sub-category{
-  font-size: xx-large;
-
-
-}
-
 li{
   list-style-type: none;
-  padding: 10px;
-
-
-
 
 }

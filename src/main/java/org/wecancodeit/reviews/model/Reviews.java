@@ -1,7 +1,5 @@
 package org.wecancodeit.reviews.model;
 
-import org.wecancodeit.reviews.ReviewRepository;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +11,7 @@ public class Reviews {
     @Id
     @GeneratedValue
     private long id;
-    private int showRating;
+    private String showRating;
     private String airDate;
     @Lob
     private String description;
@@ -25,7 +23,7 @@ public class Reviews {
     protected Reviews() {
     }
 
-    public Reviews(String showTitle, Integer showRating, String airDate, String description, String imageUrl, Hashtags... hashtags) {
+    public Reviews(String showTitle, String showRating, String airDate, String description, String imageUrl, Hashtags... hashtags) {
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
@@ -39,7 +37,7 @@ public class Reviews {
     }
 
 
-    public int getShowRating() {
+    public String getShowRating() {
         return showRating;
     }
 

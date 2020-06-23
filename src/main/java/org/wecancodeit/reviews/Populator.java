@@ -42,12 +42,12 @@ public class Populator implements CommandLineRunner {
         hashtagsRepo.save(hashtag2);
         hashtagsRepo.save(hashtag3);
 
-        Reviews review1 = new Reviews("Powerpuff Girls", 3, "November 18, 1998",
+        Reviews review1 = new Reviews("Powerpuff Girls", "3 out of 5", "November 18, 1998",
                 "This was my favorite show growing up! I always wanted to be a power puff girl." +
                         " I loved their tenacity and the show has great villains. ",
                 "/images/powerpuffgirlsimage.png", hashtag1, hashtag3);
 
-        Reviews review2 = new Reviews("Steven Universe", 5, "November 4, 2013",
+        Reviews review2 = new Reviews("Steven Universe", "5 out of 5", "November 4, 2013",
                 "is honestly a great animated series for all ages. It tackles everyday issues with " +
                         "such depth and complexity that children can digest and adults can fully grasp. In terms" +
                         " of characters is one the most diverse shows on television in racial and LGBT representation." +
@@ -55,7 +55,7 @@ public class Populator implements CommandLineRunner {
                         " of the series is the allusion to 90's Japanese RPG's and Shojo series.",
                 "/images/steven-universe.png", hashtag1, hashtag3);
 
-        Reviews review3 = new Reviews("Superjail", 5, "September 28, 2008",
+        Reviews review3 = new Reviews("Superjail", "5 out of 5", "September 28, 2008",
                 "Takes place in another dimension, in an eponymous jail inside of a volcano." +
                         "  Superjail is a psychedelic very violent show that focuses on different" +
                         " aspects of this fictional jail, it mostly operates as a comedy for adults. " +
@@ -63,7 +63,7 @@ public class Populator implements CommandLineRunner {
                 "/images/superjail.jpg",
                 hashtag1, hashtag2);
 
-        Reviews review4 = new Reviews("Afro Samurai", 4, "January 4, 2007",
+        Reviews review4 = new Reviews("Afro Samurai", "4 out of 5", "January 4, 2007",
                 " Afro Samurai focuses on a samurai named Afro whose mission is to" +
                         " get the number 1 headband and avenge his father. The setting is somewhat feudal however some " +
                         "characters have androids and other futuristic technology." +
