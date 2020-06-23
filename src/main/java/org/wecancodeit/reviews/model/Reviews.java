@@ -1,9 +1,12 @@
 package org.wecancodeit.reviews.model;
 
+import org.wecancodeit.reviews.ReviewRepository;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Objects;
 
 @Entity
 public class Reviews {
@@ -56,5 +59,14 @@ public class Reviews {
 
     public Collection<Hashtags> getHashtags() {
         return hashtags;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Reviews reviews = (Reviews) o;
+        return id == reviews.id &&
+                Objects.equals(hashtags, reviews.hashtags);
     }
 }

@@ -23,5 +23,9 @@ public class HashtagsStorage {
     public Hashtags findById(Long hashtagID) {
         return hashtagsRepo.findById(hashtagID).get();
     }
+
+    public void saveHashtags(Hashtags hashtags){
+        hashtagsRepo.save(hashtags);
+    }
 }
 

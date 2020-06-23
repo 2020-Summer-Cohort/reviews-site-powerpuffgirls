@@ -12,6 +12,7 @@ import org.wecancodeit.reviews.model.Reviews;
     ReviewRepository reviewRepo;
 
 
+
     public ReviewStorage(ReviewRepository reviewRepo) {
         this.reviewRepo = reviewRepo;
     }
@@ -24,9 +25,9 @@ import org.wecancodeit.reviews.model.Reviews;
         return reviewRepo.findAll();
     }
 
-    public void addHashtags(Hashtags hashtags){
-        reviewRepo.save(hashtags);
-    }
+//    public void saveHashtags(Hashtags hashtags){
+//        reviewRepo.save(hashtags);
+//    }
 //     public void addCampus(Campus campus) {
 //        campusRepo.save(campus);
 //    }

@@ -35,7 +35,9 @@ public class ReviewsController {
     }
     @PostMapping("hashtags/add")
     public String addNewHashtag(String hashtag){
-        return "redirect:/categories";
+        Hashtags hashtagToAdd = new Hashtags(hashtag);
+        hashtagsStorage.saveHashtags(hashtagToAdd);
+        return "redirect:/reviews/";
     }
 
 //    add new hashtags
