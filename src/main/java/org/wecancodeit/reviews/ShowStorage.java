@@ -1,9 +1,7 @@
 package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.wecancodeit.reviews.model.Shows;
 
 @Service
 public class ShowStorage {

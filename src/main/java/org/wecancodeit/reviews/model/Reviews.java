@@ -1,10 +1,9 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.awt.image.BufferedImage;
 
 @Entity
 public class Reviews {

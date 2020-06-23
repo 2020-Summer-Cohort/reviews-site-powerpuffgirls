@@ -3,9 +3,10 @@ package org.wecancodeit.reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
+import org.wecancodeit.reviews.model.Categories;
+import org.wecancodeit.reviews.model.Hashtags;
+import org.wecancodeit.reviews.model.Reviews;
+import org.wecancodeit.reviews.model.Shows;
 
 @Component
 public class Populator implements CommandLineRunner {

@@ -1,6 +1,7 @@
 package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.model.Hashtags;
 
 @Service
 public class HashtagsStorage {

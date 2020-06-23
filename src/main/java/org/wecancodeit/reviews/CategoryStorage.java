@@ -1,8 +1,7 @@
 package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
-
-import java.util.*;
+import org.wecancodeit.reviews.model.Categories;
 
 @Service
 public class CategoryStorage {
