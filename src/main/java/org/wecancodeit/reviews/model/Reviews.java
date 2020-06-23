@@ -22,13 +22,15 @@ public class Reviews {
     @ManyToMany
     private Collection<Hashtags> hashtags;
 
-    protected Reviews(){}
+    protected Reviews() {
+    }
 
-    public Reviews(String showTitle, Integer showRating, String airDate, String description, String imageUrl, Hashtags... hashtags){
+    public Reviews(String showTitle, Integer showRating, String airDate, String description, String imageUrl, Hashtags... hashtags) {
         this.showTitle = showTitle;
         this.showRating = showRating;
         this.airDate = airDate;
         this.description = description;
+        this.imageUrl = imageUrl;
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
 
