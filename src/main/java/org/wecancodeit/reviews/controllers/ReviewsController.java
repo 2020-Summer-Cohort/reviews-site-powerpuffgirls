@@ -47,4 +47,15 @@ public class ReviewsController {
         return "redirect:/reviews/" + showTitle;
     }
 
+    @PostMapping("hashtags/delete")
+    public String deleteHashtags(String hashtagName, String showTitle) {
+        Hashtags hashtagsToRemove = new Hashtags(hashtagName);
+        hashtagsStorage.removeHashtags(hashtagsToRemove);
+        Reviews reviews = reviewStorage.findReviewsByShowTitle(showTitle);
+        reviews.removeHashtag(hashtagsToRemove);
+        reviewStorage.save(reviews);
+        hashtagsStorage.saveHashtags(hashtags);
+        return "redirect:/reviews/" + showTitle;
+    }
+
 }

@@ -37,6 +37,9 @@
             <ul>
                 <li th:each="hashtags: ${reviews.hashtags}">
                     <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}"></a>
+                            <form action="/hashtags/remove" method="POST" class="hashtag-input">
+                                <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
+                                <button type="Remove">x</button>
                 </li>
             </ul>
         </div>

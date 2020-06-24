@@ -73,4 +73,6 @@ public class Reviews {
     public void addHashtag(Hashtags hashtagToAdd) {
         hashtags.add(hashtagToAdd);
     }
+
+    public void removeHashtag(Hashtags hashtagsToRemove) {hashtags.remove(hashtagsToRemove); }
 }

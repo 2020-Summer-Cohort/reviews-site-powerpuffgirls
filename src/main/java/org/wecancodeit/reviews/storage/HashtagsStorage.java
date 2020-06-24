@@ -28,5 +28,7 @@ public class HashtagsStorage {
     public void saveHashtags(Hashtags hashtags) {
         hashtagsRepo.save(hashtags);
     }
+
+    public void removeHashtags(Hashtags hashtags) { hashtagsRepo.delete(hashtags); }
 }
 
