@@ -29,15 +29,24 @@ public class Populator implements CommandLineRunner {
         Categories category2 = new Categories("Kids Cartoons");
         categoriesRepo.save(category1);
         categoriesRepo.save(category2);
-
-        Shows show1 = new Shows("Powerpuff Girls", category2);
-        Shows show2 = new Shows("Steven Universe", category2);
-        Shows show3 = new Shows("Superjail", category1);
-        Shows show4 = new Shows("Afro Samurai", category1);
+        Shows show1 = new Shows("Superjail", category1);
+        Shows show2 = new Shows("Afro Samurai", category1);
+        Shows show3 = new Shows("Aqua Teen Hunger Force", category1);
+        Shows show4 = new Shows("South Park", category1);
+        Shows show5 = new Shows("Rick and Morty", category1);
+        Shows show6 = new Shows("Powerpuff Girls", category2);
+        Shows show7 = new Shows("Steven Universe", category2);
+        Shows show8 = new Shows("Spongebob Squarepants", category2);
+        Shows show9 = new Shows("Avatar: The Last Air Bender", category2);
         showsRepo.save(show1);
         showsRepo.save(show2);
         showsRepo.save(show3);
         showsRepo.save(show4);
+        showsRepo.save(show5);
+        showsRepo.save(show6);
+        showsRepo.save(show7);
+        showsRepo.save(show8);
+        showsRepo.save(show9);
 
         Hashtags hashtag1 = new Hashtags("#funny");
         Hashtags hashtag2 = new Hashtags("#violent");
@@ -52,7 +61,7 @@ public class Populator implements CommandLineRunner {
                 "/images/powerpuffgirlsimage.png", hashtag1, hashtag3);
 
         Reviews review2 = new Reviews("Steven Universe", "5 out of 5", "November 4, 2013",
-                "is honestly a great animated series for all ages. It tackles everyday issues with " +
+                "Honestly a great animated series for all ages. It tackles everyday issues with " +
                         "such depth and complexity that children can digest and adults can fully grasp. In terms" +
                         " of characters is one the most diverse shows on television in racial and LGBT representation." +
                         " Perfectly blending themes of love,trauma and growth realistically. My personal favorite part" +
@@ -74,10 +83,40 @@ public class Populator implements CommandLineRunner {
                         " The show focuses on battles between the eponymous character and others who are seeking the headband",
                 "/images/afro-samurai.png", hashtag2);
 
+        Reviews review5 = new Reviews("Aqua Teen Hunger Force", "4 out of 5", "December 30, 2000",
+                "Aqua Teen Hunger Force also called ATHF," +
+                " is a comedy that appeared on adult swim. The show featured main characters Meatwad, " +
+                "Mastershake and Frylock as they got into different comedic situations in a fictional universe.", "gotta get pic" , hashtag1, hashtag2);
+
+        Reviews review6 = new Reviews("South Park","5 out of 5","August 13, 1997",
+                "Truly comedy gold. South Park offers stories based on the current times with a pleasant dark twist." +
+                        " I personally love the animation style and the terrible celebrity impersonations.", "gotta get pic", hashtag1, hashtag2 );
+
+        Reviews review7 = new Reviews("Rick and Morty", "2 out of 5", "December 2, 2013",
+                "Want to go on a cosmically wacky adventures and visit another dimension?  Rick and Morty is the show for you." +
+                        " I truly enjoy the whimsical mind of Rick, the crazy mad scientist, and Morty the shy but spirited kid just " +
+                        "looking for fun. Take a peek of what else is out there and take a ride into the universe all while laughing your butt off.",
+        "need to get", hashtag1);
+
+        Reviews review8 = new Reviews("Spongebob Squarepants", "5 out of 5", "July 17, 1999",
+                "The peak of children's entertainment, the stories told throughout this series are too relatable. I have been that fool who ripped their pants." +
+                        "I’m happy to let my children watch this show. Not only does it have valuable life lessons but it’s also pretty witty!", "need to get", hashtag1,
+                hashtag3);
+
+        Reviews review9 = new Reviews("Avatar: The Last Air Bender", "3 out of 5", "Febuary 21, 2005",
+                " This is my favorite show of all time. The storylines are intricate and the character development is unparalleled compared to similar shows.",
+                "need to get", hashtag1, hashtag3);
+
+
         reviewRepo.save(review1);
         reviewRepo.save(review2);
         reviewRepo.save(review3);
         reviewRepo.save(review4);
+        reviewRepo.save(review5);
+        reviewRepo.save(review6);
+        reviewRepo.save(review7);
+        reviewRepo.save(review8);
+        reviewRepo.save(review9);
 
 
     }

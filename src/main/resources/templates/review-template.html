@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <header>
-        <h2 th:each="reviews: ${reviews}"
+        <h2 th:each="reviews: ${reviews}"></h2>
         <h2 th:text="${reviews.showTitle}">
 
         </h2>
@@ -25,25 +25,27 @@
             <div class="super-jail-pic">
                 <img th:src="${reviews.imageUrl}">
             </div>
-            <p>
+
                 <strong>
-            <p th:text="${reviews.airDate}"></p>
+                    <p>Air Date:
+            <p th:text="${reviews.airDate}">
             </strong>
-            </p>
-            <p>
+        </p>
+        </div>
+
             <p th:text="${reviews.description}"></p>
             <p th:text="${reviews.showRating}"></p>
             </p>
             <ul>
                 <li th:each="hashtags: ${reviews.hashtags}">
                     <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}"></a>
-                    <form action="/hashtags/delete" method="POST" class="hashtag-input">
-                        <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
-                        <button type="submit">x</button>
-                    </form>
+<!--                    <form action="/hashtags/delete" method="POST" class="hashtag-input">-->
+<!--                        <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">-->
+<!--                        <button type="submit">x</button>-->
+<!--                    </form>-->
                 </li>
             </ul>
-        </div>
+
 
         <form action="/hashtags/add" method="POST" class="hashtag-input">
             <label for="new-hashtags__name-input">New hashtag name:</label>
