@@ -23,10 +23,13 @@ a {
 .adult-animation {
   padding: 5px;
 }
-
-footer {
+ footer{
+   padding: 10px;
+ }
+footer a{
   padding: 10px;
-
+  text-decoration: underline;
+  background-color: #B0B5BF;
 }
 
 img {

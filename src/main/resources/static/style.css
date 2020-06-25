@@ -32,10 +32,7 @@ a:visited {
     text-decoration: none;
 }
 
-.adult-animation {
-    border-radius: 50%;
 
-}
 
 .remove-button button {
     padding: 5px;
@@ -47,17 +44,45 @@ a:visited {
 }
 
 .hashtag-input button {
-    padding: 3px;
+    padding: 10px;
     border-style: none;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    background-color: #8cd790;
+    border-radius: 25px;
+
+    font-family: "Questrial", sans-serif;
 
 }
 
 .hashtags-remove li {
     justify-content: space-between;
 }
+.new-hashtags__name-input{
+    padding: 40px;
+}
 
 .hashtag-input {
     font-size: larger;
+
+}
+form input{
+    width: 50%;
+    height: 50px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    text-align: center;
+    resize: none;
+
+
 }
 
 
@@ -117,8 +142,14 @@ p {
 
 .sub-category {
     font-size: x-large;
-    padding: 20px;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 25px;
 
+}
+.sub-category a{
+    border-radius: 25px;
+    padding: 20px;
 }
 
 li {

@@ -52,8 +52,8 @@
 
 
         <form action="/hashtags/add" method="POST" class="hashtag-input">
-            <label for="new-hashtags__name-input">New hashtag name:</label>
-            <input type="text" name="hashtagName" id="new-hashtags__name-input">
+            <label for="new-hashtags__name-input"></label>
+            <input type="text" name="hashtagName" id="new-hashtags__name-input" placeholder="Enter A New #">
             <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
             <button type="submit">Submit</button>
         </form>
