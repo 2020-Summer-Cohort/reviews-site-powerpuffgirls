@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=BebasNeue&family=Fredoka+One&family=Questrial&family=Quicksand:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=MuseoModerno&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -36,6 +37,30 @@ a:visited {
 
 }
 
+.remove-button button {
+    padding: 5px;
+    border-radius: 50%;
+    border-style: none;
+    background-color: #d7fff1;
+    font-family: "Fredoka One", cursive;
+
+}
+
+.hashtag-input button {
+    padding: 3px;
+    border-style: none;
+
+}
+
+.hashtags-remove li {
+    justify-content: space-between;
+}
+
+.hashtag-input {
+    font-size: larger;
+}
+
+
 .categories {
     display: inline-block;
     font-size: xx-large;
@@ -59,6 +84,14 @@ a:visited {
     border-radius: 5px;
 }
 
+.hashtags-remove {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 header h1 {
     font-family: "Fredoka One", cursive;
@@ -78,12 +111,12 @@ h3 {
 
 p {
     background-color: var(--color1-aero-blue);
-    font-family: "Quicksand", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: larger;
 }
 
 .sub-category {
-    font-size: xx-large;
+    font-size: x-large;
     padding: 20px;
 
 }

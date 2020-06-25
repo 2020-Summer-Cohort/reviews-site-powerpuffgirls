@@ -36,13 +36,15 @@
             <p th:text="${reviews.description}"></p>
             <p th:text="${reviews.showRating}"></p>
             </p>
-            <ul>
+            <ul class="hashtags-remove">
                 <li th:each="hashtags: ${reviews.hashtags}">
-                    <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}"></a>
-                    <form action="/hashtags/delete" method="POST">
+                    <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}">
+
+                    </a>
+                    <form action="/hashtags/delete" method="POST" class="remove-button">
                         <input type="hidden" name="hashtagId" th:value="${hashtags.id}">
                         <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
-                        <button type="submit">X</button>
+                        <button type="submit">x</button>
                     </form>
                 </li>
             </ul>
