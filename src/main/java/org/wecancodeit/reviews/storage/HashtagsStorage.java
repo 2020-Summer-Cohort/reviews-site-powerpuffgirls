@@ -25,9 +25,7 @@ public class HashtagsStorage {
         return hashtagsRepo.findById(hashtagID).get();
     }
 
-    public void saveHashtags(Hashtags hashtags) {
-        hashtagsRepo.save(hashtags);
-    }
+    public void saveHashtags(Hashtags hashtags) { hashtagsRepo.save(hashtags); }
 
     public void removeHashtags(Hashtags hashtags) { hashtagsRepo.delete(hashtags); }
 }

@@ -16,7 +16,7 @@ public class ReviewsController {
 
     private ReviewStorage reviewStorage;
     private HashtagsStorage hashtagsStorage;
-    private Hashtags hashtags;
+
 
     public ReviewsController(ReviewStorage reviewStorage, HashtagsStorage hashtagsStorage) {
         this.reviewStorage = reviewStorage;
@@ -48,13 +48,11 @@ public class ReviewsController {
     }
 
     @PostMapping("hashtags/delete")
-    public String deleteHashtags(String hashtagName, String showTitle) {
-        Hashtags hashtagsToRemove = new Hashtags(hashtagName);
-        hashtagsStorage.removeHashtags(hashtagsToRemove);
+    public String deleteHashtags(long hashtagId, String showTitle) {
+        Hashtags hashtagsToRemove = hashtagsStorage.findById(hashtagId);
         Reviews reviews = reviewStorage.findReviewsByShowTitle(showTitle);
         reviews.removeHashtag(hashtagsToRemove);
         reviewStorage.save(reviews);
-        hashtagsStorage.saveHashtags(hashtags);
         return "redirect:/reviews/" + showTitle;
     }
 
