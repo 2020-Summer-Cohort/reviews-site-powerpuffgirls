@@ -25,7 +25,7 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Categories category1 = new Categories("Adult Animation");
+        Categories category1 = new Categories("Blogs");
         Categories category2 = new Categories("Kids Cartoons");
         categoriesRepo.save(category1);
         categoriesRepo.save(category2);
