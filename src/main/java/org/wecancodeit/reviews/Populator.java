@@ -25,10 +25,12 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Categories category1 = new Categories("Blogs");
-        Categories category2 = new Categories("Kids Cartoons");
+        Categories category1 = new Categories("Current Events");
+        Categories category2 = new Categories("Fish Blogs");
+        Categories category3 = new Categories("Plants Blogs");
         categoriesRepo.save(category1);
         categoriesRepo.save(category2);
+        categoriesRepo.save(category3);
         Shows show1 = new Shows("Superjail", category1);
         Shows show2 = new Shows("Afro Samurai", category1);
         Shows show3 = new Shows("Aqua Teen Hunger Force", category1);
@@ -37,11 +39,10 @@ public class Populator implements CommandLineRunner {
         Shows show6 = new Shows("Powerpuff Girls", category2);
         Shows show7 = new Shows("Steven Universe", category2);
         Shows show8 = new Shows("Spongebob Squarepants", category2);
-        Shows show9 = new Shows("Avatar: The Last Air Bender", category2);
+        Shows show9 = new Shows("Avatar: The Last Air Bender", category3);
         showsRepo.save(show1);
         showsRepo.save(show2);
         showsRepo.save(show3);
-        showsRepo.save(show4);
         showsRepo.save(show5);
         showsRepo.save(show6);
         showsRepo.save(show7);
