@@ -14,7 +14,7 @@ public class ShowStorage {
     }
 
     public Shows findShowsByName(String title) {
-        return showsRepo.findByShowTitle(title);
+        return showsRepo.findByPostTitle(title);
     }
 
     public Iterable<Shows> findAllShows() {

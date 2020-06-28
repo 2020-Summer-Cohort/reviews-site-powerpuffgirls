@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.wecancodeit.reviews.entities.Shows;
 
 public interface ShowsRepository extends CrudRepository<Shows, Long> {
-    Shows findByShowTitle(String showTitle);
+    Shows findByPostTitle(String postTitle);
 }

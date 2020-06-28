@@ -13,7 +13,7 @@ public class Shows {
         @Id
         @GeneratedValue
         private long id;
-        private String showTitle;
+        private String postTitle;
         @OneToMany
         private Collection<Reviews> reviews;
         @ManyToOne
@@ -21,8 +21,8 @@ public class Shows {
 
         protected Shows(){}
 
-    public Shows(String showTitle, Categories categories) {
-        this.showTitle = showTitle;
+    public Shows(String postTitle, Categories categories) {
+        this.postTitle = postTitle;
         this.categories = categories;
 
     }
@@ -32,8 +32,8 @@ public class Shows {
         return id;
     }
 
-    public String getShowTitle() {
-        return showTitle;
+    public String getPostTitle() {
+        return postTitle;
     }
 
     public Categories getCategories() {

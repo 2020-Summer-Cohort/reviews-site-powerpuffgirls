@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="/layout.css" rel="stylesheet"/>
     <link href="/style.css" rel="stylesheet"/>
-    <title th:text="${reviews.showTitle}"></title>
+    <title th:text="${reviews.postTitle}"></title>
 </head>
 <body>
 <div class="container">
     <header>
         <h2 th:each="reviews: ${reviews}"></h2>
-        <h2 th:text="${reviews.showTitle}">
+        <h2 th:text="${reviews.postTitle}">
 
         </h2>
     </header>
@@ -33,7 +33,7 @@
         </p>
         </div>
 
-            <p th:text="${reviews.description}"></p>
+            <p th:text="${reviews.bodyOfPost}"></p>
             <p th:text="${reviews.showRating}"></p>
             </p>
             <ul class="hashtags-remove">
@@ -43,18 +43,18 @@
                     </a>
                     <form action="/hashtags/delete" method="POST" class="remove-button">
                         <input type="hidden" name="hashtagId" th:value="${hashtags.id}">
-                        <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
+                        <input type="hidden" name="postTitle" th:value="${reviews.postTitle}">
                         <button type="submit">x</button>
                     </form>
                 </li>
             </ul>
 
 
-
+gi
         <form action="/hashtags/add" method="POST" class="hashtag-input">
             <label for="new-hashtags__name-input"></label>
             <input type="text" name="hashtagName" id="new-hashtags__name-input" placeholder="Enter A New #">
-            <input type="hidden" name="showTitle" th:value="${reviews.showTitle}">
+            <input type="hidden" name="postTitle" th:value="${reviews.postTitle}">
             <button type="submit">Submit</button>
         </form>
 

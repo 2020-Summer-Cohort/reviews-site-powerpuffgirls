@@ -31,7 +31,7 @@ public class Populator implements CommandLineRunner {
         categoriesRepo.save(category1);
         categoriesRepo.save(category2);
         categoriesRepo.save(category3);
-        Shows show1 = new Shows("Superjail", category1);
+        Shows show1 = new Shows("1", category1);
         Shows show2 = new Shows("Afro Samurai", category1);
         Shows show3 = new Shows("Aqua Teen Hunger Force", category1);
         Shows show4 = new Shows("South Park", category1);
@@ -69,7 +69,7 @@ public class Populator implements CommandLineRunner {
                         " of the series is the allusion to 90's Japanese RPG's and Shojo series.",
                 "/images/steven-universe.png", hashtag1, hashtag3);
 
-        Reviews review3 = new Reviews("Superjail", "★★★★", "September 28, 2008",
+        Reviews review3 = new Reviews("1", "★★★★", "September 28, 2008",
                 "Takes place in another dimension, in an eponymous jail inside of a volcano." +
                         "  Superjail is a psychedelic very violent show that focuses on different" +
                         " aspects of this fictional jail, it mostly operates as a comedy for adults. " +

@@ -24,9 +24,9 @@ public class ReviewsController {
     }
 
 
-    @RequestMapping("reviews/{showTitle}")
-    public String showSingleReview(@PathVariable String showTitle, Model model) {
-        model.addAttribute("reviews", reviewStorage.findReviewsByShowTitle(showTitle));
+    @RequestMapping("reviews/{postTitle}")
+    public String showSingleReview(@PathVariable String postTitle, Model model) {
+        model.addAttribute("reviews", reviewStorage.findReviewsByPostTitle(postTitle));
 
         return "review-template";
     }
@@ -38,22 +38,22 @@ public class ReviewsController {
     }
 
     @PostMapping("hashtags/add")
-    public String addNewHashtag(String hashtagName, String showTitle) {
+    public String addNewHashtag(String hashtagName, String postTitle) {
         Hashtags hashtagToAdd = new Hashtags(hashtagName);
         hashtagsStorage.saveHashtags(hashtagToAdd);
-        Reviews reviews = reviewStorage.findReviewsByShowTitle(showTitle);
+        Reviews reviews = reviewStorage.findReviewsByPostTitle(postTitle);
         reviews.addHashtag(hashtagToAdd);
         reviewStorage.save(reviews);
-        return "redirect:/reviews/" + showTitle;
+        return "redirect:/reviews/" + postTitle;
     }
 
     @PostMapping("hashtags/delete")
-    public String deleteHashtags(long hashtagId, String showTitle) {
+    public String deleteHashtags(long hashtagId, String postTitle) {
         Hashtags hashtagsToRemove = hashtagsStorage.findById(hashtagId);
-        Reviews reviews = reviewStorage.findReviewsByShowTitle(showTitle);
+        Reviews reviews = reviewStorage.findReviewsByPostTitle(postTitle);
         reviews.removeHashtag(hashtagsToRemove);
         reviewStorage.save(reviews);
-        return "redirect:/reviews/" + showTitle;
+        return "redirect:/reviews/" + postTitle;
     }
 
 }

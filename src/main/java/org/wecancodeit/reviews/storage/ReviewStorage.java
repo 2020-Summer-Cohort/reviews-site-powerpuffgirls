@@ -16,8 +16,8 @@ public class ReviewStorage {
         this.reviewRepo = reviewRepo;
     }
 
-    public Reviews findReviewsByShowTitle(String showTitle) {
-        return reviewRepo.findByShowTitle(showTitle);
+    public Reviews findReviewsByPostTitle(String postTitle) {
+        return reviewRepo.findByPostTitle(postTitle);
     }
 
     public Iterable<Reviews> findAllReviews() {

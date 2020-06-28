@@ -13,13 +13,13 @@ public class HashtagsStorage {
         this.hashtagsRepo = hashtagsRepo;
     }
 
-    public Hashtags findHashtagsByReviews(String hashtagName) {
-        return hashtagsRepo.findHashtagsByReviews(hashtagName);
-    }
+//    public Hashtags findHashtagsByReviews(String hashtagName) {
+//        return hashtagsRepo.findHashtagsByReviews(hashtagName);
+//    }
 
-    public Iterable<Hashtags> findAllHashtags() {
-        return hashtagsRepo.findAll();
-    }
+//    public Iterable<Hashtags> findAllHashtags() {
+//        return hashtagsRepo.findAll();
+//    }
 
     public Hashtags findById(Long hashtagID) {
         return hashtagsRepo.findById(hashtagID).get();

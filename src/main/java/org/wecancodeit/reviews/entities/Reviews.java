@@ -14,20 +14,20 @@ public class Reviews {
     private String showRating;
     private String airDate;
     @Lob
-    private String description;
+    private String bodyOfPost;
     private String imageUrl;
-    private String showTitle;
+    private String postTitle;
     @ManyToMany
     private Collection<Hashtags> hashtags;
 
     protected Reviews() {
     }
 
-    public Reviews(String showTitle, String showRating, String airDate, String description, String imageUrl, Hashtags... hashtags) {
-        this.showTitle = showTitle;
+    public Reviews(String postTitle, String showRating, String airDate, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+        this.postTitle = postTitle;
         this.showRating = showRating;
         this.airDate = airDate;
-        this.description = description;
+        this.bodyOfPost = bodyOfPost;
         this.imageUrl = imageUrl;
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
@@ -45,16 +45,16 @@ public class Reviews {
         return airDate;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBodyOfPost() {
+        return bodyOfPost;
     }
 
     public long getId() {
         return id;
     }
 
-    public String getShowTitle() {
-        return showTitle;
+    public String getPostTitle() {
+        return postTitle;
     }
 
     public Collection<Hashtags> getHashtags() {

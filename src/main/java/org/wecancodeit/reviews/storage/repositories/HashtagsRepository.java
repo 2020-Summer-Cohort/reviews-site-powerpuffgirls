@@ -5,6 +5,6 @@ import org.wecancodeit.reviews.entities.Hashtags;
 
 public interface HashtagsRepository extends CrudRepository<Hashtags, Long> {
 
-    Hashtags findHashtagsByReviews(String hashtagName);
+   // Hashtags findHashtagsByReviews(String hashtagName);
 
 }
