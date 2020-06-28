@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="/layout.css" rel="stylesheet"/>
     <link href="/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title th:text="${reviews.postTitle}"></title>
 </head>
 <body>
@@ -34,10 +35,16 @@
         </div>
 
             <p th:text="${reviews.bodyOfPost}"></p>
-            <p th:text="${reviews.showRating}"></p>
-            </p>
-            <ul class="hashtags-remove">
+<!--            <p th:text="${reviews.showRating}"></p>-->
+        <!-- Labels / tags -->
+        <div class="w3-card w3-margin">
+            <div class="w3-container w3-padding">
+                <h4>Tags</h4>
+            </div>
+            <div class="w3-container w3-white">
+                <ul>
                 <li th:each="hashtags: ${reviews.hashtags}">
+
                     <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}">
 
                     </a>
@@ -46,11 +53,14 @@
                         <input type="hidden" name="postTitle" th:value="${reviews.postTitle}">
                         <button type="submit">x</button>
                     </form>
+                    </p>
                 </li>
-            </ul>
+                </ul>
+            </div>
+        </div>
 
 
-gi
+
         <form action="/hashtags/add" method="POST" class="hashtag-input">
             <label for="new-hashtags__name-input"></label>
             <input type="text" name="hashtagName" id="new-hashtags__name-input" placeholder="Enter A New #">
