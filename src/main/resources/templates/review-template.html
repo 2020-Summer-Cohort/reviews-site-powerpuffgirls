@@ -10,13 +10,13 @@
     <link href="/layout.css" rel="stylesheet"/>
     <link href="/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title th:text="${reviews.postTitle}"></title>
+    <title th:text="${blogPosts.postTitle}"></title>
 </head>
 <body>
 <div class="container">
     <header>
-        <h2 th:each="reviews: ${reviews}"></h2>
-        <h2 th:text="${reviews.postTitle}">
+        <h2 th:each="BlogPosts: ${blogPosts}"></h2>
+        <h2 th:text="${blogPosts.postTitle}">
 
         </h2>
     </header>
@@ -24,18 +24,18 @@
     <main>
         <div class="super-jail">
             <div class="super-jail-pic">
-                <img th:src="${reviews.imageUrl}">
+                <img th:src="${blogPosts.imageUrl}">
             </div>
 
                 <strong>
-                    <p>Air Date:
-            <p th:text="${reviews.airDate}">
+                    <p>Date written:
+            <p th:text="${blogPosts.dateOfPost}">
             </strong>
         </p>
         </div>
 
-            <p th:text="${reviews.bodyOfPost}"></p>
-<!--            <p th:text="${reviews.showRating}"></p>-->
+            <p th:text="${blogPosts.bodyOfPost}"></p>
+<!--            <p th:text="${blogPosts.showRating}"></p>-->
         <!-- Labels / tags -->
         <div class="w3-card w3-margin">
             <div class="w3-container w3-padding">
@@ -43,14 +43,14 @@
             </div>
             <div class="w3-container w3-white">
                 <ul>
-                <li th:each="hashtags: ${reviews.hashtags}">
+                <li th:each="hashtags: ${blogPosts.hashtags}">
 
                     <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}">
 
                     </a>
                     <form action="/hashtags/delete" method="POST" class="remove-button">
                         <input type="hidden" name="hashtagId" th:value="${hashtags.id}">
-                        <input type="hidden" name="postTitle" th:value="${reviews.postTitle}">
+                        <input type="hidden" name="postTitle" th:value="${blogPosts.postTitle}">
                         <button type="submit">x</button>
                     </form>
                     </p>
@@ -64,7 +64,7 @@
         <form action="/hashtags/add" method="POST" class="hashtag-input">
             <label for="new-hashtags__name-input"></label>
             <input type="text" name="hashtagName" id="new-hashtags__name-input" placeholder="Enter A New #">
-            <input type="hidden" name="postTitle" th:value="${reviews.postTitle}">
+            <input type="hidden" name="postTitle" th:value="${blogPosts.postTitle}">
             <button type="submit">Submit</button>
         </form>
 

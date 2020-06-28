@@ -2,7 +2,7 @@ package org.wecancodeit.reviews.storage;
 //
 
 import org.springframework.stereotype.Service;
-import org.wecancodeit.reviews.entities.Reviews;
+import org.wecancodeit.reviews.entities.BlogPosts;
 import org.wecancodeit.reviews.storage.repositories.ReviewRepository;
 //
 
@@ -16,16 +16,16 @@ public class ReviewStorage {
         this.reviewRepo = reviewRepo;
     }
 
-    public Reviews findReviewsByPostTitle(String postTitle) {
+    public BlogPosts findReviewsByPostTitle(String postTitle) {
         return reviewRepo.findByPostTitle(postTitle);
     }
 
-    public Iterable<Reviews> findAllReviews() {
+    public Iterable<BlogPosts> findAllReviews() {
         return reviewRepo.findAll();
     }
 
-    public void save(Reviews reviews) {
-        reviewRepo.save(reviews);
+    public void save(BlogPosts blogPosts) {
+        reviewRepo.save(blogPosts);
     }
 
 

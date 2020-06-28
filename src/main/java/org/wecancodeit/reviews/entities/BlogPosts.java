@@ -7,12 +7,12 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-public class Reviews {
+public class BlogPosts {
     @Id
     @GeneratedValue
     private long id;
     private String showRating;
-    private String airDate;
+    private String dateOfPost;
     @Lob
     private String bodyOfPost;
     private String imageUrl;
@@ -20,13 +20,13 @@ public class Reviews {
     @ManyToMany
     private Collection<Hashtags> hashtags;
 
-    protected Reviews() {
+    protected BlogPosts() {
     }
 
-    public Reviews(String postTitle, String showRating, String airDate, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+    public BlogPosts(String postTitle, String showRating, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
         this.postTitle = postTitle;
         this.showRating = showRating;
-        this.airDate = airDate;
+        this.dateOfPost = dateOfPost;
         this.bodyOfPost = bodyOfPost;
         this.imageUrl = imageUrl;
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
@@ -41,8 +41,8 @@ public class Reviews {
         return showRating;
     }
 
-    public String getAirDate() {
-        return airDate;
+    public String getDateOfPost() {
+        return dateOfPost;
     }
 
     public String getBodyOfPost() {
@@ -65,9 +65,9 @@ public class Reviews {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Reviews reviews = (Reviews) o;
-        return id == reviews.id &&
-                Objects.equals(hashtags, reviews.hashtags);
+        BlogPosts blogPosts = (BlogPosts) o;
+        return id == blogPosts.id &&
+                Objects.equals(hashtags, blogPosts.hashtags);
     }
 
     public void addHashtag(Hashtags hashtagToAdd) {

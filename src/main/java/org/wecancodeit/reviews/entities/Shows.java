@@ -15,7 +15,7 @@ public class Shows {
         private long id;
         private String postTitle;
         @OneToMany
-        private Collection<Reviews> reviews;
+        private Collection<BlogPosts> blogPosts;
         @ManyToOne
         private Categories categories;
 
@@ -40,7 +40,7 @@ public class Shows {
         return categories;
     }
 
-    public Collection<Reviews> getReviews() {
-        return reviews;
+    public Collection<BlogPosts> getReviews() {
+        return blogPosts;
     }
 }

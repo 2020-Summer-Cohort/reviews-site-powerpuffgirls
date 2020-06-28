@@ -36,9 +36,9 @@ a:visited {
 
 .remove-button button {
     padding: 5px;
-    border-radius: 50%;
+    border-radius: 95%;
     border-style: none;
-    background-color: #d7fff1;
+    /*background-color: #d7fff1;*/
     font-family: "Fredoka One", cursive;
 
 }
@@ -58,9 +58,9 @@ a:visited {
 
 }
 
-.hashtags-remove li {
-    justify-content: space-between;
-}
+/*.hashtags-remove li {*/
+/*    justify-content: space-between;*/
+/*}*/
 .new-hashtags__name-input{
     padding: 40px;
 }
