@@ -19,8 +19,8 @@
     <main>
         <div>
             <ul>
-                <li href th:each="review : ${hashtag.blogPosts}">
-                    <a th:text="${review.postTitle}" th:href="@{'/blogPosts/'+${review.postTitle}}">
+                <li href th:each="blogposts : ${hashtag.blogPosts}">
+                    <a th:text="${blogposts.postTitle}" th:href="@{'/blogPosts/'+${blogposts.postTitle}}">
                     </a>
                 </li>
 

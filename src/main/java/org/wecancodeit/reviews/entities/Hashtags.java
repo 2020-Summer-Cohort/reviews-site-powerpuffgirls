@@ -25,7 +25,7 @@ public class Hashtags {
     private long id;
     private String hashtagName;
     @ManyToMany(mappedBy = "hashtags")
-    private Collection<BlogPosts> reviews;
+    private Collection<BlogPosts> blogPosts;
 
 
     protected Hashtags() {
@@ -43,8 +43,8 @@ public class Hashtags {
         return hashtagName;
     }
 
-    public Collection<BlogPosts> getReviews() {
-        return reviews;
+    public Collection<BlogPosts> getBlogPosts() {
+        return blogPosts;
     }
 }
 
