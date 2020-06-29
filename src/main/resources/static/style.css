@@ -8,16 +8,16 @@
 }
 
 :root {
-    --color1-aero-blue: #d7fff1;
-    --color2-granny-smith-apple: #aafcb8;
-    --color3-granny-smith-apple-2: #8cd790;
+    --color1: #C1B098;
+    --color2: #9B9B93;
+    --color3: #39393A;
     --color4-green-sheen: #77af9c;
     --color5-castleton-green: #285943;
 }
 
 a {
     border-radius: 25px;
-    background-color: var(--color3-granny-smith-apple-2);
+    background-color: var(--color3);
     padding: 10px;
     font-family: "Questrial", sans-serif;
 }
@@ -131,11 +131,11 @@ header h2 {
 h3 {
     border-radius: 25px;
     font-family: "Quicksand", sans-serif;
-    background-color: var(--color2-granny-smith-apple);
+    background-color: var(--color2);
 }
 
 p {
-    background-color: var(--color1-aero-blue);
+    background-color: var(--color1);
     font-family: 'Fira Sans', sans-serif;
     font-size: larger;
 }

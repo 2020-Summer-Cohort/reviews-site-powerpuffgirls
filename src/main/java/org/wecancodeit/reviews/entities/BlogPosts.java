@@ -11,7 +11,7 @@ public class BlogPosts {
     @Id
     @GeneratedValue
     private long id;
-    private String showRating;
+    private String unused;
     private String dateOfPost;
     @Lob
     private String bodyOfPost;
@@ -25,9 +25,9 @@ public class BlogPosts {
     protected BlogPosts() {
     }
 
-    public BlogPosts(String postTitle, String showRating, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+    public BlogPosts(String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
         this.postTitle = postTitle;
-        this.showRating = showRating;
+        this.unused = unused;
         this.dateOfPost = dateOfPost;
         this.bodyOfPost = bodyOfPost;
         this.imageUrl = imageUrl;
@@ -39,8 +39,8 @@ public class BlogPosts {
     }
 
 
-    public String getShowRating() {
-        return showRating;
+    public String getUnused() {
+        return unused;
     }
 
     public String getDateOfPost() {

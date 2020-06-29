@@ -6,14 +6,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.wecancodeit.reviews.entities.AuthorC;
 import org.wecancodeit.reviews.entities.BlogPosts;
 import org.wecancodeit.reviews.entities.Categories;
+import org.wecancodeit.reviews.storage.AuthorStorage;
 import org.wecancodeit.reviews.storage.CategoryStorage;
 import org.wecancodeit.reviews.storage.ReviewStorage;
 import org.wecancodeit.reviews.entities.Hashtags;
 import org.wecancodeit.reviews.storage.HashtagsStorage;
 
 import javax.swing.text.html.HTML;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Controller
 public class ReviewsController {
@@ -62,16 +66,16 @@ public class ReviewsController {
         return "redirect:/blogPosts/" + postTitle;
     }
 
-    @PostMapping("post/add")
-    public String addNewPost(String title, String body, String authors, String tags, String categoryName) {
-        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
+//    @PostMapping("post/add")
+//    public String addNewPost(String title, String body, String authors, String tags, String categoryName) {
+//        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
 //        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
-        postTags.add(hashtagsStorage.findById(Long id) ;
-        Collection<Author> postAuthors = new ArrayList<Author>();
-        postAuthors.add(authorStorage.findByName(authors));faodijoj
-        Post postToAdd = new Post(title, body, postAuthors, postTags, postCategory);
-        postStorage.savePost(postToAdd);
-        return "redirect:/categories/" + postCategory.getName();
-    }
+//        postTags.add (hashtagsStorage.findById(hashtagId));
+//        Collection<AuthorC> postAuthors = new ArrayList<AuthorC>();
+//        postAuthors.add(AuthorStorage.findbyName(postAuthors));
+//        Post postToAdd = new Post(title, body, postAuthors, postTags, postCategory);
+//        ReviewStorage.save(postToAdd);
+//        return "redirect:/categories/" + postCategory.getName();
+//    }
 
 }
