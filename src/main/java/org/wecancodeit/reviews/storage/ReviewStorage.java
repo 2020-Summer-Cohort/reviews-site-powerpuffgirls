@@ -3,16 +3,16 @@ package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
 import org.wecancodeit.reviews.entities.BlogPosts;
-import org.wecancodeit.reviews.storage.repositories.ReviewRepository;
+import org.wecancodeit.reviews.storage.repositories.BlogPostsRepository;
 //
 
 
 @Service
 public class ReviewStorage {
 
-    ReviewRepository reviewRepo;
+    BlogPostsRepository reviewRepo;
 
-    public ReviewStorage(ReviewRepository reviewRepo) {
+    public ReviewStorage(BlogPostsRepository reviewRepo) {
         this.reviewRepo = reviewRepo;
     }
 

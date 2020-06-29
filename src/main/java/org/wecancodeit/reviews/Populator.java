@@ -3,25 +3,21 @@ package org.wecancodeit.reviews;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.wecancodeit.reviews.entities.BlogPosts;
-import org.wecancodeit.reviews.entities.Categories;
-import org.wecancodeit.reviews.entities.Hashtags;
-import org.wecancodeit.reviews.entities.BlogName;
-import org.wecancodeit.reviews.storage.repositories.CategoriesRepository;
-import org.wecancodeit.reviews.storage.repositories.HashtagsRepository;
-import org.wecancodeit.reviews.storage.repositories.ReviewRepository;
-import org.wecancodeit.reviews.storage.repositories.ShowsRepository;
+import org.wecancodeit.reviews.entities.*;
+import org.wecancodeit.reviews.storage.repositories.*;
 
 @Component
 public class Populator implements CommandLineRunner {
     @Autowired
     CategoriesRepository categoriesRepo;
     @Autowired
-    ReviewRepository reviewRepo;
+    BlogPostsRepository reviewRepo;
     @Autowired
     ShowsRepository showsRepo;
     @Autowired
     HashtagsRepository hashtagsRepo;
+    @Autowired
+    AuthorRepository authorRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -55,6 +51,7 @@ public class Populator implements CommandLineRunner {
         hashtagsRepo.save(hashtag1);
         hashtagsRepo.save(hashtag2);
         hashtagsRepo.save(hashtag3);
+
 
         BlogPosts review1 = new BlogPosts("Powerpuff Girls", "★★★", "November 18, 1998",
                 "This was my favorite show growing up! I always wanted to be a power puff girl." +
@@ -118,6 +115,9 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(review7);
         reviewRepo.save(review8);
         reviewRepo.save(review9);
+
+        AuthorC author1 = new AuthorC("wofejiiwea");
+        authorRepo.save(author1);
 
 
     }

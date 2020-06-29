@@ -28,7 +28,7 @@ public class ReviewsController {
     public String showSingleReview(@PathVariable String postTitle, Model model) {
         model.addAttribute("blogPosts", reviewStorage.findReviewsByPostTitle(postTitle));
 
-        return "review-template";
+        return "blogpost-template";
     }
 
     @RequestMapping("hashtags/{hashtagID}")
