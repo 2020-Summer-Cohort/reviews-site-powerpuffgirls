@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 import java.util.Collection;
 
 @Entity
-public class Shows {
+public class BlogName {
 
         @Id
         @GeneratedValue
@@ -19,9 +19,9 @@ public class Shows {
         @ManyToOne
         private Categories categories;
 
-        protected Shows(){}
+        protected BlogName(){}
 
-    public Shows(String postTitle, Categories categories) {
+    public BlogName(String postTitle, Categories categories) {
         this.postTitle = postTitle;
         this.categories = categories;
 

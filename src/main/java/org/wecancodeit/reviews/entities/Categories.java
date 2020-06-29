@@ -14,7 +14,7 @@ public class Categories {
     private long id;
     private String name;
     @OneToMany(mappedBy = "categories")
-    private Collection<Shows> shows;
+    private Collection<BlogName> shows;
 
     protected Categories() {
     }
@@ -31,7 +31,7 @@ public class Categories {
         return id;
     }
 
-    public Collection<Shows> getShows() {
+    public Collection<BlogName> getShows() {
         return shows;
     }
 

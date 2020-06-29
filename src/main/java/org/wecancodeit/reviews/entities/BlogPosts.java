@@ -19,6 +19,8 @@ public class BlogPosts {
     private String postTitle;
     @ManyToMany
     private Collection<Hashtags> hashtags;
+//    @ManyToOne
+//    private
 
     protected BlogPosts() {
     }

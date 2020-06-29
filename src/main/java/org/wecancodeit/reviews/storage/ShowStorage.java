@@ -2,7 +2,7 @@ package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
 import org.wecancodeit.reviews.storage.repositories.ShowsRepository;
-import org.wecancodeit.reviews.entities.Shows;
+import org.wecancodeit.reviews.entities.BlogName;
 
 @Service
 public class ShowStorage {
@@ -13,11 +13,11 @@ public class ShowStorage {
         this.showsRepo = showsRepo;
     }
 
-    public Shows findShowsByName(String title) {
+    public BlogName findShowsByName(String title) {
         return showsRepo.findByPostTitle(title);
     }
 
-    public Iterable<Shows> findAllShows() {
+    public Iterable<BlogName> findAllShows() {
         return showsRepo.findAll();
     }
 
