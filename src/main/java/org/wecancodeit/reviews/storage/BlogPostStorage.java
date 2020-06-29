@@ -8,11 +8,11 @@ import org.wecancodeit.reviews.storage.repositories.BlogPostsRepository;
 
 
 @Service
-public class ReviewStorage {
+public class BlogPostStorage {
 
     BlogPostsRepository reviewRepo;
 
-    public ReviewStorage(BlogPostsRepository reviewRepo) {
+    public BlogPostStorage(BlogPostsRepository reviewRepo) {
         this.reviewRepo = reviewRepo;
     }
 

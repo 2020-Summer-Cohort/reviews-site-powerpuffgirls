@@ -27,13 +27,13 @@ public class Populator implements CommandLineRunner {
         categoriesRepo.save(currentCategory);
         categoriesRepo.save(fishCategory);
         categoriesRepo.save(plantCategory);
-        BlogName blog1 = new BlogName("Man In Tree", currentCategory);
+//        BlogName blog1 = new BlogName("Man In Tree", currentCategory);
         BlogName blog2 = new BlogName("Weird Dream 2", currentCategory);
         BlogName Blog3 = new BlogName("New Neighbor", currentCategory);
         BlogName show6 = new BlogName("Poecilia reticulata", fishCategory);
         BlogName show7 = new BlogName("Apistogramma", fishCategory);
         BlogName show8 = new BlogName("Cryptocoryne", plantCategory);
-        showsRepo.save(blog1);
+//        showsRepo.save(blog1);
         showsRepo.save(blog2);
         showsRepo.save(Blog3);
         showsRepo.save(show6);
@@ -58,13 +58,13 @@ public class Populator implements CommandLineRunner {
                 "most closely related to the Apistogramma panduro"+ "they are nice dwarf cichlids from South America",
                 "/images/apistogramma.png", hashtag1, hashtag3);
 
-        BlogPosts review3 = new BlogPosts("Man in Tree", "★★★★", "September 28, 2008",
-                "Today I saw a man in a tree." +
-                        "  I don't know why this person was in a tree" +
-                        " He was just randomly yelling at the birds in the tree. " +
-                        "Very odd and funny",
-                "/images/manintree.jpg",
-                hashtag1, hashtag2);
+//        BlogPosts review3 = new BlogPosts("Man in Tree", "★★★★", "September 28, 2008",
+//                "Today I saw a man in a tree." +
+//                        "  I don't know why this person was in a tree" +
+//                        " He was just randomly yelling at the birds in the tree. " +
+//                        "Very odd and funny",
+//                "/images/manintree.jpg",
+//                hashtag1, hashtag2);
 
 
         BlogPosts review5 = new BlogPosts("Weird Dream 2", "★★★★", "December 30, 2000",
@@ -89,7 +89,7 @@ public class Populator implements CommandLineRunner {
 
         reviewRepo.save(review1);
         reviewRepo.save(review2);
-        reviewRepo.save(review3);
+//        reviewRepo.save(review3);
         reviewRepo.save(review5);
         reviewRepo.save(review7);
         reviewRepo.save(review8);
