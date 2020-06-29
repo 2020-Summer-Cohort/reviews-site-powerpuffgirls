@@ -1,14 +1,19 @@
 package org.wecancodeit.reviews.controllers;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.reviews.entities.BlogPosts;
+import org.wecancodeit.reviews.entities.Categories;
+import org.wecancodeit.reviews.storage.CategoryStorage;
 import org.wecancodeit.reviews.storage.ReviewStorage;
 import org.wecancodeit.reviews.entities.Hashtags;
 import org.wecancodeit.reviews.storage.HashtagsStorage;
+
+import javax.swing.text.html.HTML;
 
 @Controller
 public class ReviewsController {
@@ -16,6 +21,7 @@ public class ReviewsController {
 
     private ReviewStorage reviewStorage;
     private HashtagsStorage hashtagsStorage;
+    private CategoryStorage categoryStorage;
 
 
     public ReviewsController(ReviewStorage reviewStorage, HashtagsStorage hashtagsStorage) {
@@ -54,6 +60,18 @@ public class ReviewsController {
         blogPosts.removeHashtag(hashtagsToRemove);
         reviewStorage.save(blogPosts);
         return "redirect:/blogPosts/" + postTitle;
+    }
+
+    @PostMapping("post/add")
+    public String addNewPost(String title, String body, String authors, String tags, String categoryName) {
+        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
+//        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
+        postTags.add(hashtagsStorage.findById(Long id) ;
+        Collection<Author> postAuthors = new ArrayList<Author>();
+        postAuthors.add(authorStorage.findByName(authors));faodijoj
+        Post postToAdd = new Post(title, body, postAuthors, postTags, postCategory);
+        postStorage.savePost(postToAdd);
+        return "redirect:/categories/" + postCategory.getName();
     }
 
 }

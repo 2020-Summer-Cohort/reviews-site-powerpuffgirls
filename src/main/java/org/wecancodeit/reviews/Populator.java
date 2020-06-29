@@ -27,8 +27,8 @@ public class Populator implements CommandLineRunner {
         categoriesRepo.save(category1);
         categoriesRepo.save(category2);
         categoriesRepo.save(category3);
-        BlogName show1 = new BlogName("Man In Tree", category1);
-        BlogName show2 = new BlogName("Afro Samurai", category1);
+        BlogName blog1 = new BlogName("Man In Tree", category1);
+        BlogName blog2 = new BlogName("Weird Dream", category1);
         BlogName show3 = new BlogName("Aqua Teen Hunger Force", category1);
         BlogName show4 = new BlogName("South Park", category1);
         BlogName show5 = new BlogName("Rick and Morty", category1);
@@ -36,8 +36,8 @@ public class Populator implements CommandLineRunner {
         BlogName show7 = new BlogName("Steven Universe", category2);
         BlogName show8 = new BlogName("Spongebob Squarepants", category2);
         BlogName show9 = new BlogName("Avatar: The Last Air Bender", category3);
-        showsRepo.save(show1);
-        showsRepo.save(show2);
+        showsRepo.save(blog1);
+        showsRepo.save(blog2);
         showsRepo.save(show3);
         showsRepo.save(show5);
         showsRepo.save(show6);
